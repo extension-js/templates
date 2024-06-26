@@ -1,11 +1,11 @@
 import {Component} from 'preact'
 import {signal} from '@preact/signals'
 
-import preactLogo from '../public/preact.png'
-import tailwindBg from '../public/tailwind_bg.png'
-import typescriptLogo from '../public/typescript.png'
-import tailwindLogo from '../public/tailwind.png'
-import chromeWindowBg from '../public/chromeWindow.png'
+import preactLogo from '../images/preact.png'
+import tailwindBg from '../images/tailwind_bg.png'
+import typescriptLogo from '../images/typescript.png'
+import tailwindLogo from '../images/tailwind.png'
+import chromeWindowBg from '../images/chromeWindow.png'
 
 export default function ContentApp() {
   const isdialogOpen = signal(true)
@@ -63,7 +63,7 @@ export default function ContentApp() {
             />
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            This is a content script running React, TypeScript, and
+            This is a content script running Preact, TypeScript, and
             Tailwind.css.
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
