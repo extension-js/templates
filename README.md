@@ -13,7 +13,7 @@
 <img alt="Tbe Templates website" src="https://github.com/extension-js/extension.js/assets/4672033/e33fb5d7-2a74-4efe-8fc1-c829db356124"> 
 <hr>
 
-<img alt="Logo" align="right" src="https://github.com/extension-js/extension.js/assets/4672033/8c9260dc-4a82-4f55-9114-1380ecc5b3ae" width="150" />
+<img alt="Logo" align="right" src="https://github.com/extension-js/extension.js/assets/4672033/8c9260dc-4a82-4f55-9114-1380ecc5b3ae" width="220" />
 
 > Professional templates for building cross-browser extensions with no build configuration.
 
