@@ -1,0 +1,27 @@
+name: 🛠️
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  generate-templates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.3
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "20.11.1"
+
+      - name: Installing build dependencies
+        run: npm i
+
+      # - name: Generate /templates folder from source templates (creates /templates folder)
+      #   run: sh ci-scripts/generate_templates_from_source.sh
+
+      # - name: Validate /templates against Extension.js
+      #   run: npm run test
