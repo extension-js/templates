@@ -1,4 +1,4 @@
-[action-image]: https://github.com/extension-js/templates/actions/workflows/spec.yml/badge.svg?branch=main
+[action-image]: https://github.com/extension-js/templates/actions/workflows/🛠️/badge.svg?branch=main
 [action-url]: https://github.com/extension-js/templates/actions
 [prs-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 [prs-url]: https://github.com/extension-js/templates/blob/main/CONTRIBUTING.md
