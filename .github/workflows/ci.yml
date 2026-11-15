@@ -877,6 +877,48 @@ jobs:
           if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
+  # Safari — every example through the converter and xcodebuild
+  # Safari extensions build on macOS only, so this is the one macOS job. It
+  # proves the build, not the run: nothing here opens Safari.
+  # ──────────────────────────────────────────────────────────────────────────
+  build-safari:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.cli-version && 'extension-js/templates' || github.repository }}
+          ref: ${{ inputs.cli-version && inputs.ref || '' }}
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Pin the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        run: node scripts/checks/pin-cli-under-test.mjs --before-install
+
+      - run: pnpm install
+        if: ${{ inputs.cli-version == '' }}
+
+      - name: Install with the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        run: |
+          pnpm install --no-frozen-lockfile --config.minimum-release-age=0
+          node scripts/checks/pin-cli-under-test.mjs --installed
+
+      - name: Show the toolchain
+        run: |
+          sw_vers
+          xcodebuild -version
+          xcrun --find safari-web-extension-converter
+
+      - name: Build all examples (safari only)
+        run: node scripts/build/build-all.mjs --browsers=safari
+
+  # ──────────────────────────────────────────────────────────────────────────
   # CI passed — the one check the main ruleset requires
   # ──────────────────────────────────────────────────────────────────────────
   ci-passed:
@@ -898,6 +940,7 @@ jobs:
       - e2e-small
       - e2e-assets
       - e2e-firefox
+      - build-safari
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
