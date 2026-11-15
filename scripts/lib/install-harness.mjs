@@ -117,7 +117,32 @@ function spawnOptions(cwd, env, {stdin = 'inherit', detached = false} = {}) {
   }
 }
 
-export function run(command, args, cwd, env = {}, options = {}) {
+// The registry rate limits a burst of lookups (corepack asks it for the
+// latest pnpm or yarn on every call), which is not what these guards test.
+const RATE_LIMIT_PATTERN = /HTTP 429|429 Too Many Requests/
+const RATE_LIMIT_WAITS_MS = [15000, 30000, 60000]
+
+export async function run(command, args, cwd, env = {}, options = {}) {
+  const waits = options.rateLimitWaitsMs ?? RATE_LIMIT_WAITS_MS
+  let result = await runOnce(command, args, cwd, env, options)
+
+  for (const wait of waits) {
+    if (result.code === 0) break
+    if (!RATE_LIMIT_PATTERN.test(`${result.stdout}\n${result.stderr}`)) break
+
+    console.log(
+      `The registry rate limited \`${command} ${args.join(' ')}\` (HTTP 429). Running it again in ${wait / 1000}s.`
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, wait))
+
+    result = await runOnce(command, args, cwd, env, options)
+  }
+
+  return result
+}
+
+function runOnce(command, args, cwd, env = {}, options = {}) {
   return new Promise((resolve) => {
     const child = spawn(
       commandFor(command),
