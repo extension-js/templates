@@ -133,7 +133,9 @@ export async function run(command, args, cwd, env = {}, options = {}) {
     console.log(
       `The registry rate limited \`${command} ${args.join(' ')}\` (HTTP 429). Running it again in ${wait / 1000}s.`
     )
+
     await new Promise((resolve) => setTimeout(resolve, wait))
+
     result = await runOnce(command, args, cwd, env, options)
   }
 
