@@ -33,8 +33,8 @@ importers:
         specifier: ^9.16.0
         version: 9.39.1(jiti@2.6.1)
       extension:
-        specifier: 4.1.39
-        version: 4.1.39(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0)
+        specifier: 4.1.40-canary.458.001a6a0
+        version: 4.1.40-canary.458.001a6a0(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0)
       globals:
         specifier: ^15.13.0
         version: 15.15.0
@@ -4275,12 +4275,12 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
-  extension-create@4.1.39:
-    resolution: {integrity: sha512-Mu/CWuW4xJ0RtaWGbrpeC7L1NZODhgc10X4oNYrH4KoCf1fE9HuNRjBWcYPsbA6RejXshNqZ5pXvnV3kriuHEw==}
+  extension-create@4.1.40-canary.458.001a6a0:
+    resolution: {integrity: sha512-qboa7XpKDgQr7V/sYT7jVp1LhLbuI2Nw5zJiIuBenfa5ml1VVH1rOZ6dk0flTlUYWieWk88pMy0c8YdWMp86UQ==}
     engines: {node: '>=22.12'}
 
-  extension-develop@4.1.39:
-    resolution: {integrity: sha512-C0pJuYRwUXBeJvhg01uyhBDbysnJlJHaV3bfg3d4Ephw92YmX0vkmK8Szv6tr2bJan6M1GzLg66tNFzG1aNibg==}
+  extension-develop@4.1.40-canary.458.001a6a0:
+    resolution: {integrity: sha512-R1DzKYcr5Jub+cAMjc6MWTGNcRNU9inWQIBW0eiJhNuECLCi8hQB/aBG46FRFVdlCbxvDEmlKw7dKC5/PKMEQQ==}
     engines: {node: '>=22.12'}
 
   extension-from-store@0.2.5:
@@ -4288,12 +4288,12 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  extension-install@4.1.39:
-    resolution: {integrity: sha512-kHyG/0N9PbWf528I5xL8dqWej1giUPVPoh4T0XtGibYKyfe4r4jAxQ23gUFvzvuUhV1o59BzGA87HqIpyGySSA==}
+  extension-install@4.1.40-canary.458.001a6a0:
+    resolution: {integrity: sha512-xtTXkmjqL1paKTzaxoZUPltwsLJfq0N7o45r71lU6iVvKZlPlVKl4OfBP73rUSX2PFrmu4JD+lFPVKg/s/frnQ==}
     engines: {node: '>=22.12'}
 
-  extension@4.1.39:
-    resolution: {integrity: sha512-mSFz8oWZnKMNJFA7O+4R+cc0I+1mK/wVRHOU35O/Nxh6v7S448V7XhW59R6MGz1wa33dYyjJwcweM92VkiH8Aw==}
+  extension@4.1.40-canary.458.001a6a0:
+    resolution: {integrity: sha512-DvHQHr5YOPtdMDG8fGXziQCdS2tcpblmXW9OB1PcDm4cH6rH3m+PlOn7zaoPsmgExi78sylLIyBEyuFXepiGDg==}
     engines: {node: '>=22.12'}
     hasBin: true
 
@@ -4609,6 +4609,7 @@ packages:
   image-size@0.5.5:
     resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
+    deprecated: Please migrate to image-size@2.x
     hasBin: true
 
   immutable@5.1.3:
@@ -9986,7 +9987,7 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extension-create@4.1.39:
+  extension-create@4.1.40-canary.458.001a6a0:
     dependencies:
       axios: 1.20.0
       cross-spawn: 7.0.6
@@ -9998,7 +9999,7 @@ snapshots:
       - debug
       - supports-color
 
-  extension-develop@4.1.39(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0):
+  extension-develop@4.1.40-canary.458.001a6a0(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0):
     dependencies:
       '@babel/core': 7.29.7
       '@babel/preset-typescript': 7.29.7(@babel/core@7.29.7)
@@ -10062,12 +10063,12 @@ snapshots:
     dependencies:
       fflate: 0.8.3
 
-  extension-install@4.1.39:
+  extension-install@4.1.40-canary.458.001a6a0:
     dependencies:
       cross-spawn: 7.0.6
       pintor: 0.3.0
 
-  extension@4.1.39(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0):
+  extension@4.1.40-canary.458.001a6a0(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0):
     dependencies:
       '@types/chrome': 0.0.287
       '@types/node': 22.19.17
@@ -10077,9 +10078,9 @@ snapshots:
       chromium-location: 2.1.2
       commander: 15.0.0
       edge-location: 2.3.1
-      extension-create: 4.1.39
-      extension-develop: 4.1.39(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0)
-      extension-install: 4.1.39
+      extension-create: 4.1.40-canary.458.001a6a0
+      extension-develop: 4.1.40-canary.458.001a6a0(sass@1.94.1)(svelte@5.43.12)(typescript@7.0.2)(webpack@5.103.0)
+      extension-install: 4.1.40-canary.458.001a6a0
       firefox-location2: 3.2.0
       floorp-location: 1.0.0
       librewolf-location: 1.2.1
