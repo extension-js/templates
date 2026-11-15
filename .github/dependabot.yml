@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # The whole repository runs on one pinned Extension.js version. After each
+  # stable release this opens the repin pull request, and CI is its check.
+  # Nothing else is updated here: the examples keep the versions they teach.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "extension"
+    open-pull-requests-limit: 1
+    rebase-strategy: "auto"
