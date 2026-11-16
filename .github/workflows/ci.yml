@@ -80,6 +80,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-
 
+      # Keyed before the install: a gate run rewrites the lockfile, and the
+      # jobs that restore this cache hash the lockfile as checked out.
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Pin the CLI under test
         if: ${{ inputs.cli-version != '' }}
         run: node scripts/checks/pin-cli-under-test.mjs --before-install
@@ -93,14 +103,6 @@ jobs:
         run: |
           pnpm install --no-frozen-lockfile --config.minimum-release-age=0
           node scripts/checks/pin-cli-under-test.mjs --installed
-
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
 
       - run: pnpm test:install chromium firefox
 
