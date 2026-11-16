@@ -94,6 +94,7 @@
     "test:markup-punctuation": "node scripts/checks/assert-no-space-before-punctuation.mjs",
     "test:template-videos": "node scripts/checks/assert-template-videos.mjs",
     "test:template-screenshots": "node scripts/checks/assert-template-screenshots.mjs",
+    "test:template-types": "node scripts/checks/assert-template-types.mjs",
     "test:store-md": "node scripts/catalog/generate-store-md.mjs --check"
   },
   "files": [

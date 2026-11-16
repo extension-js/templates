@@ -167,6 +167,39 @@ jobs:
       - run: pnpm run test:canary-one-run
 
   # ──────────────────────────────────────────────────────────────────────────
+  # Type check: tsc --noEmit in every TypeScript template
+  # The build strips types, so no other job sees a type error in a template.
+  # ──────────────────────────────────────────────────────────────────────────
+  type-check:
+    needs: setup
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.cli-version && 'extension-js/templates' || github.repository }}
+          ref: ${{ inputs.cli-version && inputs.ref || '' }}
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Restore node_modules
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            node_modules
+            examples/*/node_modules
+          key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}${{ inputs.cli-version && format('-cli-{0}', inputs.cli-version) || '' }}
+
+      - name: Pin the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        run: node scripts/checks/pin-cli-under-test.mjs
+
+      - run: pnpm run test:template-types
+
+  # ──────────────────────────────────────────────────────────────────────────
   # Optional dependency guards
   # ──────────────────────────────────────────────────────────────────────────
   optional-deps-guards:
@@ -931,6 +964,7 @@ jobs:
     needs:
       - setup
       - build-and-lint
+      - type-check
       - optional-deps-guards
       - create-dev-workflow-guards
       - create-dev-workflow-guards-windows
