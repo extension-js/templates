@@ -94,6 +94,7 @@
     "test:markup-punctuation": "node scripts/checks/assert-no-space-before-punctuation.mjs",
     "test:template-videos": "node scripts/checks/assert-template-videos.mjs",
     "test:template-screenshots": "node scripts/checks/assert-template-screenshots.mjs",
+    "test:template-types": "node scripts/checks/assert-template-types.mjs",
     "test:store-md": "node scripts/catalog/generate-store-md.mjs --check"
   },
   "files": [
@@ -106,10 +107,9 @@
     "@eslint/js": "^9.16.0",
     "@playwright/test": "^1.56.1",
     "@stylistic/eslint-plugin": "5.10.0",
-    "@types/chrome": "^0.0.287",
     "@types/node": "^22.10.1",
     "eslint": "^9.16.0",
-    "extension": "4.1.39",
+    "extension": "4.1.41",
     "globals": "^15.13.0",
     "knip": "^5.33.0",
     "lint-staged": "16.1.0",
