@@ -6,7 +6,6 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "@types/chrome": "^0.0.287",
     "typescript": "7.0.2"
   }
 }
