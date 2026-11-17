@@ -12,8 +12,10 @@ name: Examples CI
 # one package.json names, and runs unchanged. The CLI release workflow calls it
 # before a stable release, and it can be dispatched by hand for any version.
 on:
+  # A branch with a pull request already runs under pull_request, so a push
+  # runs only where no pull request is open: main and the catalog branches.
   push:
-    branches: ['**']
+    branches: [main, 'catalog/**']
   pull_request:
     branches: ['**']
   workflow_call:
@@ -105,6 +107,14 @@ jobs:
           node scripts/checks/pin-cli-under-test.mjs --installed
 
       - run: pnpm test:install chromium firefox
+
+      # No other lane installs a browser through the CLI, so a release is
+      # gated on one real install per system here.
+      - name: Install a managed browser through the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        env:
+          EXT_BROWSERS_CACHE_DIR: ${{ runner.temp }}/extension-browsers
+        run: pnpm exec extension install chromium --output json
 
   # ──────────────────────────────────────────────────────────────────────────
   # Build, lint, contract assertions
@@ -327,6 +337,14 @@ jobs:
         if: ${{ inputs.cli-version != '' }}
         run: node scripts/checks/pin-cli-under-test.mjs
 
+      # No other lane installs a browser through the CLI, so a release is
+      # gated on one real install per system here.
+      - name: Install a managed browser through the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        env:
+          EXT_BROWSERS_CACHE_DIR: ${{ runner.temp }}/extension-browsers
+        run: pnpm exec extension install chromium --output json
+
       - run: pnpm run test:content-react
       # Windows is ~4x slower than Linux for create+dev workflows.
       # Run a representative subset to stay within the 60-min timeout.
@@ -450,18 +468,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Upload build artifacts
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-examples-content
-          path: |
-            examples/content*/dist/
-            examples/content*/build/
-            examples/content*/.extension/
-          compression-level: 6
-          retention-days: 1
-          if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
   # E2E — Sidebar (4 examples)
@@ -526,18 +532,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Upload build artifacts
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-examples-sidebar
-          path: |
-            examples/sidebar*/dist/
-            examples/sidebar*/build/
-            examples/sidebar*/.extension/
-          compression-level: 6
-          retention-days: 1
-          if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
   # E2E — New tab (10+ examples)
@@ -602,18 +596,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Upload build artifacts
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-examples-newtab
-          path: |
-            examples/new*/dist/
-            examples/new*/build/
-            examples/new*/.extension/
-          compression-level: 6
-          retention-days: 1
-          if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
   # E2E — Mixed context (javascript, preact, react, svelte, typescript, vue)
@@ -678,21 +660,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Upload build artifacts
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-examples-mixed-context
-          path: |
-            examples/javascript/dist/
-            examples/preact/dist/
-            examples/react/dist/
-            examples/svelte/dist/
-            examples/typescript/dist/
-            examples/vue/dist/
-          compression-level: 6
-          retention-days: 1
-          if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
   # E2E — Small batch (action + special-folders + other + init)
@@ -775,18 +742,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      - name: Upload build artifacts
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-examples-small
-          path: |
-            examples/action*/dist/
-            examples/special-folders*/dist/
-            examples/init/dist/
-          compression-level: 6
-          retention-days: 1
-          if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
   # E2E — Assets (shadow DOM, CSS pipeline, icons, framework mount, SW)
@@ -943,6 +898,14 @@ jobs:
         run: |
           pnpm install --no-frozen-lockfile --config.minimum-release-age=0
           node scripts/checks/pin-cli-under-test.mjs --installed
+
+      # No other lane installs a browser through the CLI, so a release is
+      # gated on one real install per system here.
+      - name: Install a managed browser through the CLI under test
+        if: ${{ inputs.cli-version != '' }}
+        env:
+          EXT_BROWSERS_CACHE_DIR: ${{ runner.temp }}/extension-browsers
+        run: pnpm exec extension install chromium --output json
 
       - name: Show the toolchain
         run: |

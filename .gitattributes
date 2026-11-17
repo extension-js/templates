@@ -1,0 +1,4 @@
+# Catalog images are for the gallery and READMEs. Keeping them out of the
+# archive cuts what `extension create` downloads by about 60 percent.
+/examples/*/screenshot.png export-ignore
+/.github/social-preview.png export-ignore

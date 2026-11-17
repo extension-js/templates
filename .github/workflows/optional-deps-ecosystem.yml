@@ -90,8 +90,10 @@ jobs:
       - name: Run optional deps ecosystem checks
         run: node scripts/install-contracts/assert-optional-deps-canary-matrix.mjs --pm ${{ matrix.pm }}
 
+  # Examples CI runs these same guards on every pull request and every push
+  # to main, so here they run only where it does not: the daily schedule.
   first-run-repros:
-    if: github.event_name != 'pull_request' || github.base_ref == 'main'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     name: first-run reproducibility guards
     runs-on: ubuntu-24.04
     steps:
@@ -112,9 +114,7 @@ jobs:
       - name: Assert one-run builds
         run: pnpm run test:canary-one-run
 
-      - name: Assert stable install modes
-        run: pnpm run test:stable-install-modes -- --pm pnpm
-
+      # The pnpm install modes run in the install vs exec (pnpm) job below.
       - name: Assert stable pnpm PostCSS repro
         run: pnpm run test:stable-pnpm-postcss-repro
 
