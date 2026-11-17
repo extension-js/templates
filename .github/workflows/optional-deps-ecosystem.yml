@@ -48,6 +48,9 @@ jobs:
   versioned-ecosystem:
     name: ecosystem matrix (${{ matrix.os }} / ${{ matrix.pm }})
     runs-on: ${{ matrix.os }}
+    # The slowest lane takes 3 minutes. A registry fault once left seven
+    # of them spinning, and a job with no limit holds its runner for 6 hours.
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -96,6 +99,7 @@ jobs:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     name: first-run reproducibility guards
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -122,6 +126,7 @@ jobs:
     if: github.event_name != 'pull_request' || github.base_ref == 'main'
     name: install vs exec (${{ matrix.pm }})
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
