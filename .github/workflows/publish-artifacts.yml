@@ -65,56 +65,10 @@ jobs:
       - name: Install
         run: pnpm install
 
-      - name: Download build artifacts from CI
-        if: github.event_name == 'workflow_run'
-        uses: dawidd6/action-download-artifact@v3
-        continue-on-error: true
-        with:
-          name: |
-            built-examples-content
-            built-examples-sidebar
-            built-examples-newtab
-            built-examples-mixed-context
-            built-examples-small
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: ci.yml
-          run_id: ${{ github.event.workflow_run.id }}
-          path: examples/
-
-      - name: Normalize examples (only if rebuilding)
-        if: failure() || github.event_name == 'workflow_dispatch'
-        run: node scripts/build/normalize-examples.mjs
-
-      - name: Build all examples (only if artifacts not downloaded)
-        run: |
-          # Check if dist folders exist, if not build
-          if [ -z "$(find examples -name 'dist' -type d -mindepth 2 | head -1)" ]; then
-            echo "Artifacts not found, building examples..."
-            pnpm run build:examples
-          else
-            echo "Using build artifacts from CI workflow"
-          fi
-
-      - name: Package distributions
-        run: node scripts/catalog/package-artifacts.mjs
-
+      # No template is built or zipped here: nothing read those files, and the
+      # catalog below is generated from the source tree alone.
       - name: Generate metadata
-        env:
-          RELEASE_TAG: nightly
         run: pnpm run generate:raw
-
-      - name: Publish GitHub release assets
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: nightly
-          name: nightly
-          prerelease: true
-          files: |
-            artifacts/*.zip
-            artifacts/index.json
-            templates-meta.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Stage templates metadata
         run: node scripts/catalog/publish-artifacts.mjs
@@ -124,9 +78,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add templates-meta.json
-          if ! git diff --staged --quiet; then
+          # A run that moved only the timestamp has nothing to say on main.
+          if ! git diff --staged --quiet -I '"generatedAt"'; then
             git commit -m "chore: update artifacts [skip ci]"
             git push
           fi
-
-
