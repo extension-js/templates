@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "newtab-preact-router",
+  "description": "Replaces your new tab page with a small Preact app you can navigate across routes.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "preact": "11.2.0",
+    "wouter-preact": "3.13.0"
+  },
+  "devDependencies": {
+    "@prefresh/core": "1.5.11",
+    "typescript": "7.0.2"
+  }
+}

@@ -130,6 +130,190 @@
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/action-locales"
     },
     {
+      "slug": "action-preact",
+      "name": "action-preact",
+      "title": "Preact Action (Popup)",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Adds a toolbar popup to the browser with a simple Preact page.",
+      "uiContext": ["action", "background"],
+      "surfaces": ["action", "background"],
+      "entrypoints": ["./action/index.html", "background.ts"],
+      "uiFramework": "preact",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["action", "popup", "preact", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 2,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Click the toolbar icon to open the action popup",
+        "Edit src/action/ActionApp.tsx and save to see fast refresh update it"
+      ],
+      "useCases": [
+        "A toolbar popup rendered by Preact",
+        "Quick actions that read and open tabs with no permission",
+        "Starting point for Preact extensions with a popup"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/preact",
+      "files": [
+        "examples/action-preact/extension.config.js",
+        "examples/action-preact/src/action/ActionApp.tsx",
+        "examples/action-preact/src/action/index.html",
+        "examples/action-preact/src/action/scripts.tsx",
+        "examples/action-preact/src/action/styles.css",
+        "examples/action-preact/src/background.ts",
+        "examples/action-preact/src/images/icon-128.png",
+        "examples/action-preact/src/images/icon-16.png",
+        "examples/action-preact/src/images/icon-32.png",
+        "examples/action-preact/src/images/icon-48.png",
+        "examples/action-preact/src/images/icon-64.png",
+        "examples/action-preact/src/images/icon.png",
+        "examples/action-preact/src/manifest.json"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/action-preact/screenshot.png",
+      "icon": "examples/action-preact/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/action-preact"
+    },
+    {
+      "slug": "action-svelte",
+      "name": "action-svelte",
+      "title": "Svelte Action (Popup)",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Adds a toolbar popup to the browser with a simple Svelte page.",
+      "uiContext": ["action", "background"],
+      "surfaces": ["action", "background"],
+      "entrypoints": ["./action/index.html", "background.js"],
+      "uiFramework": "svelte",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["action", "popup", "svelte", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 2,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Click the toolbar icon to open the action popup",
+        "Edit src/action/ActionApp.svelte and save to watch it update"
+      ],
+      "useCases": [
+        "Toolbar popup rendered by Svelte as the primary UI surface",
+        "Quick actions that update the toolbar badge from the popup",
+        "Starting point for Svelte extensions with a popup"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/svelte",
+      "files": [
+        "examples/action-svelte/extension.config.js",
+        "examples/action-svelte/src/action/ActionApp.svelte",
+        "examples/action-svelte/src/action/index.html",
+        "examples/action-svelte/src/action/scripts.ts",
+        "examples/action-svelte/src/action/styles.css",
+        "examples/action-svelte/src/background.js",
+        "examples/action-svelte/src/images/icon-128.png",
+        "examples/action-svelte/src/images/icon-16.png",
+        "examples/action-svelte/src/images/icon-32.png",
+        "examples/action-svelte/src/images/icon-48.png",
+        "examples/action-svelte/src/images/icon-64.png",
+        "examples/action-svelte/src/images/icon.png",
+        "examples/action-svelte/src/manifest.json"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/action-svelte/screenshot.png",
+      "icon": "examples/action-svelte/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/action-svelte"
+    },
+    {
+      "slug": "action-vue",
+      "name": "action-vue",
+      "title": "Vue Action (Popup)",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Adds a toolbar popup to the browser with a simple Vue page.",
+      "uiContext": ["action", "background"],
+      "surfaces": ["action", "background"],
+      "entrypoints": ["./action/index.html", "background.js"],
+      "uiFramework": "vue",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["action", "popup", "vue", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 2,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Click the toolbar icon to open the Vue popup",
+        "Edit src/action/ActionApp.vue and save to watch it update"
+      ],
+      "useCases": [
+        "A toolbar popup rendered by Vue",
+        "Single-file components compiled with no extra config",
+        "Starting point for Vue extensions with a popup"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/vue",
+      "files": [
+        "examples/action-vue/extension.config.js",
+        "examples/action-vue/src/action/ActionApp.vue",
+        "examples/action-vue/src/action/index.html",
+        "examples/action-vue/src/action/scripts.ts",
+        "examples/action-vue/src/action/shims-vue.d.ts",
+        "examples/action-vue/src/action/styles.css",
+        "examples/action-vue/src/background.js",
+        "examples/action-vue/src/images/icon-128.png",
+        "examples/action-vue/src/images/icon-16.png",
+        "examples/action-vue/src/images/icon-32.png",
+        "examples/action-vue/src/images/icon-48.png",
+        "examples/action-vue/src/images/icon-64.png",
+        "examples/action-vue/src/images/icon.png",
+        "examples/action-vue/src/manifest.json"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/action-vue/screenshot.png",
+      "icon": "examples/action-vue/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/action-vue"
+    },
+    {
       "slug": "ai-chatgpt",
       "name": "ai-chatgpt",
       "title": "ChatGPT AI Sidebar",
@@ -2788,6 +2972,67 @@
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-preact"
     },
     {
+      "slug": "newtab-preact-router",
+      "name": "newtab-preact-router",
+      "title": "Preact Router New Tab",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Replaces your new tab page with a small Preact app you can navigate across routes.",
+      "uiContext": ["newtab", "background"],
+      "surfaces": ["newtab", "background"],
+      "entrypoints": ["newtab/index.html", "background.ts"],
+      "uiFramework": "preact",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["new-tab", "preact", "routing", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 3,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Open a new tab and follow the links to move between routes",
+        "Add a route in src/newtab/NewTabApp.tsx and it renders with no server"
+      ],
+      "useCases": [
+        "A multi-route new tab app with client-side routing",
+        "Hash routing in Preact inside an extension page",
+        "Reference for routing with no server under MV3"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/preact",
+      "files": [
+        "examples/newtab-preact-router/extension.config.js",
+        "examples/newtab-preact-router/src/background.ts",
+        "examples/newtab-preact-router/src/images/icon-128.png",
+        "examples/newtab-preact-router/src/images/icon-16.png",
+        "examples/newtab-preact-router/src/images/icon-32.png",
+        "examples/newtab-preact-router/src/images/icon-48.png",
+        "examples/newtab-preact-router/src/images/icon-64.png",
+        "examples/newtab-preact-router/src/images/icon.png",
+        "examples/newtab-preact-router/src/manifest.json",
+        "examples/newtab-preact-router/src/newtab/NewTabApp.tsx",
+        "examples/newtab-preact-router/src/newtab/index.html",
+        "examples/newtab-preact-router/src/newtab/scripts.tsx",
+        "examples/newtab-preact-router/src/newtab/styles.css"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/newtab-preact-router/screenshot.png",
+      "icon": "examples/newtab-preact-router/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-preact-router"
+    },
+    {
       "slug": "newtab-react",
       "name": "newtab-react",
       "title": "New Tab React",
@@ -3035,6 +3280,71 @@
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-svelte"
     },
     {
+      "slug": "newtab-svelte-router",
+      "name": "newtab-svelte-router",
+      "title": "Svelte Router New Tab",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Replaces your new tab page with a small Svelte app you can navigate across routes.",
+      "uiContext": ["newtab", "background"],
+      "surfaces": ["newtab", "background"],
+      "entrypoints": ["newtab/index.html", "background.js"],
+      "uiFramework": "svelte",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["new-tab", "svelte", "routing", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 3,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Open a new tab and follow the links to move between routes",
+        "Add a route under src/newtab/routes/ and it renders with no server"
+      ],
+      "useCases": [
+        "A multi-route new tab app with client-side routing",
+        "Hash routing with svelte-spa-router inside an extension page",
+        "Reference for routing with no server under MV3"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/svelte",
+      "files": [
+        "examples/newtab-svelte-router/extension.config.js",
+        "examples/newtab-svelte-router/src/background.js",
+        "examples/newtab-svelte-router/src/images/icon-128.png",
+        "examples/newtab-svelte-router/src/images/icon-16.png",
+        "examples/newtab-svelte-router/src/images/icon-32.png",
+        "examples/newtab-svelte-router/src/images/icon-48.png",
+        "examples/newtab-svelte-router/src/images/icon-64.png",
+        "examples/newtab-svelte-router/src/images/icon.png",
+        "examples/newtab-svelte-router/src/manifest.json",
+        "examples/newtab-svelte-router/src/newtab/NewTabApp.svelte",
+        "examples/newtab-svelte-router/src/newtab/Page.svelte",
+        "examples/newtab-svelte-router/src/newtab/index.html",
+        "examples/newtab-svelte-router/src/newtab/routes/About.svelte",
+        "examples/newtab-svelte-router/src/newtab/routes/Home.svelte",
+        "examples/newtab-svelte-router/src/newtab/routes/Users.svelte",
+        "examples/newtab-svelte-router/src/newtab/scripts.ts",
+        "examples/newtab-svelte-router/src/newtab/styles.css"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/newtab-svelte-router/screenshot.png",
+      "icon": "examples/newtab-svelte-router/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-svelte-router"
+    },
+    {
       "slug": "newtab-typescript",
       "name": "newtab-typescript",
       "title": "New Tab TypeScript",
@@ -3157,6 +3467,70 @@
       "screenshot": "examples/newtab-vue/screenshot.png",
       "icon": "examples/newtab-vue/src/images/icon.png",
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-vue"
+    },
+    {
+      "slug": "newtab-vue-router",
+      "name": "newtab-vue-router",
+      "title": "Vue Router New Tab",
+      "version": "1.0.0",
+      "manifest_version": 3,
+      "description": "Replaces your new tab page with a small Vue app you can navigate across routes.",
+      "uiContext": ["newtab", "background"],
+      "surfaces": ["newtab", "background"],
+      "entrypoints": ["newtab/index.html", "background.js"],
+      "uiFramework": "vue",
+      "css": "css",
+      "configFiles": ["tsconfig.json", "extension.config.js"],
+      "hasBackground": true,
+      "hasEnv": false,
+      "setup": {
+        "packageManager": "pnpm",
+        "scripts": {},
+        "env": {
+          "hasEnvExample": false,
+          "hasEnv": false
+        }
+      },
+      "permissions": [],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "featured": false,
+      "tags": ["new-tab", "vue", "routing", "typescript"],
+      "difficulty": "beginner",
+      "timeToFirstSuccessMinutes": 3,
+      "firstSteps": [
+        "Run npm run dev to launch the extension",
+        "Open a new tab and follow the links to move between routes",
+        "Add a route in src/newtab/router.ts and it renders with no server"
+      ],
+      "useCases": [
+        "A multi-route new tab app with client-side routing",
+        "Vue Router running inside an extension page",
+        "Reference for hash history routing with no server"
+      ],
+      "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/vue",
+      "files": [
+        "examples/newtab-vue-router/extension.config.js",
+        "examples/newtab-vue-router/src/background.js",
+        "examples/newtab-vue-router/src/images/icon-128.png",
+        "examples/newtab-vue-router/src/images/icon-16.png",
+        "examples/newtab-vue-router/src/images/icon-32.png",
+        "examples/newtab-vue-router/src/images/icon-48.png",
+        "examples/newtab-vue-router/src/images/icon-64.png",
+        "examples/newtab-vue-router/src/images/icon.png",
+        "examples/newtab-vue-router/src/manifest.json",
+        "examples/newtab-vue-router/src/newtab/NewTabApp.vue",
+        "examples/newtab-vue-router/src/newtab/index.html",
+        "examples/newtab-vue-router/src/newtab/router.ts",
+        "examples/newtab-vue-router/src/newtab/scripts.ts",
+        "examples/newtab-vue-router/src/newtab/shims-vue.d.ts",
+        "examples/newtab-vue-router/src/newtab/styles.css",
+        "examples/newtab-vue-router/src/newtab/views/PageView.vue"
+      ],
+      "browsers": ["chrome", "edge", "firefox"],
+      "screenshot": "examples/newtab-vue-router/screenshot.png",
+      "icon": "examples/newtab-vue-router/src/images/icon.png",
+      "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/newtab-vue-router"
     },
     {
       "slug": "playwright",

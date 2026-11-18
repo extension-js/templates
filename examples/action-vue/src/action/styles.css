@@ -1,0 +1,77 @@
+html {
+  font-size: 62.5%;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+}
+
+body {
+  width: 300px;
+  height: 100%;
+  padding: 1rem;
+  font-size: 1.35rem;
+  line-height: 1.618;
+  color: #c9c9c9;
+  background-color: #0a0c10;
+}
+
+h1 {
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 2.7em;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 2px solid #c9c9c9;
+  color: #e5e7eb;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.counter {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+  font: inherit;
+  white-space: nowrap;
+  background-color: #ffffff;
+  color: #222222;
+  border-radius: 1px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.counter:hover {
+  background-color: #c9c9c9;
+}
+
+.counter:focus-visible {
+  outline: 2px solid #42b883;
+  outline-offset: 2px;
+}
+
+.edit-hint {
+  font-size: 0.8em;
+  color: #7d8590;
+}
+
+.edit-hint code {
+  padding: 0.2em 0.45em;
+  border-radius: 4px;
+  background-color: #161b22;
+  color: #9aa4af;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}

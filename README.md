@@ -489,6 +489,75 @@ npx extension@latest create my-extension --template javascript
   </table>
 </details>
 
+<details>
+  <summary><img src="./examples/action-preact/src/images/icon.png" alt="action-preact example icon" width="22" /> Action Preact Example</summary>
+
+> Action popup example rendered with Preact. Counts the tabs open in the current window and opens a new one from a button.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/action-preact/README.md">examples/action-preact</a></td>
+      <td rowspan="5"><img src="./examples/action-preact/screenshot.png" alt="action-preact screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">Action, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Preact</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/action-preact">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><img src="./examples/action-vue/src/images/icon.png" alt="action-vue example icon" width="22" /> Action Vue Example</summary>
+
+> Action popup example rendered with Vue. Opens a toolbar popup with a button that counts clicks.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/action-vue/README.md">examples/action-vue</a></td>
+      <td rowspan="5"><img src="./examples/action-vue/screenshot.png" alt="action-vue screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">Action, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Vue</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/action-vue">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><img src="./examples/action-svelte/src/images/icon.png" alt="action-svelte example icon" width="22" /> Action Svelte Example</summary>
+
+> Action popup example rendered with Svelte. Counts your clicks on the toolbar badge from a button in the popup.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/action-svelte/README.md">examples/action-svelte</a></td>
+      <td rowspan="5"><img src="./examples/action-svelte/screenshot.png" alt="action-svelte screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">Action, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Svelte</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/action-svelte">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
 ### DevTools
 
 <details>
@@ -1232,6 +1301,29 @@ npx extension@latest create my-extension --template javascript
 </details>
 
 <details>
+  <summary><img src="./examples/newtab-preact-router/src/images/icon.png" alt="newtab-preact-router example icon" width="22" /> New Preact Router Example</summary>
+
+> New tab page example using wouter with Preact. Shows multiple routes inside the new tab app.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/newtab-preact-router/README.md">examples/newtab-preact-router</a></td>
+      <td rowspan="5"><img src="./examples/newtab-preact-router/screenshot.png" alt="newtab-preact-router screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">New Tab, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Preact</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/newtab-preact-router">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
+<details>
   <summary><img src="./examples/newtab-react/src/images/icon.png" alt="newtab-react example icon" width="22" /> New React Example</summary>
 
 > A browser extension new tab page example built with Extension.js and React. Demonstrates a React-based new tab page with a working build and preview flow.
@@ -1324,6 +1416,29 @@ npx extension@latest create my-extension --template javascript
 </details>
 
 <details>
+  <summary><img src="./examples/newtab-svelte-router/src/images/icon.png" alt="newtab-svelte-router example icon" width="22" /> New Svelte Router Example</summary>
+
+> New tab page example using svelte-spa-router. Shows multiple routes inside the new tab app.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/newtab-svelte-router/README.md">examples/newtab-svelte-router</a></td>
+      <td rowspan="5"><img src="./examples/newtab-svelte-router/screenshot.png" alt="newtab-svelte-router screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">New Tab, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Svelte</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/newtab-svelte-router">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
+<details>
   <summary><img src="./examples/newtab-typescript/src/images/icon.png" alt="newtab-typescript example icon" width="22" /> New TypeScript Example</summary>
 
 > A browser extension new tab page example built with Extension.js and TypeScript. Demonstrates a type-safe new tab page with a working build and preview flow.
@@ -1365,6 +1480,29 @@ npx extension@latest create my-extension --template javascript
       <td>Background included</td>
       <td align="right">Yes</td>
       <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/newtab-vue">Start with this template &#8599;</a></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><img src="./examples/newtab-vue-router/src/images/icon.png" alt="newtab-vue-router example icon" width="22" /> New Vue Router Example</summary>
+
+> New tab page example using Vue Router. Shows multiple routes inside the new tab app.
+
+  <table>
+    <tr>
+      <td>Repository</td>
+      <td align="right"><a href="https://github.com/extension-js/templates/blob/main/examples/newtab-vue-router/README.md">examples/newtab-vue-router</a></td>
+      <td rowspan="5"><img src="./examples/newtab-vue-router/screenshot.png" alt="newtab-vue-router screenshot" width="360" /></td>
+    </tr>
+    <tr><td>Version</td><td align="right">1.0.0</td></tr>
+    <tr><td>Context</td><td align="right">New Tab, Background</td></tr>
+    <tr><td>JavaScript framework</td><td align="right">Vue</td></tr>
+    <tr><td>CSS</td><td align="right">CSS</td></tr>
+    <tr>
+      <td>Background included</td>
+      <td align="right">Yes</td>
+      <td align="center"><a href="https://github.com/extension-js/templates/tree/main/examples/newtab-vue-router">Start with this template &#8599;</a></td>
     </tr>
   </table>
 </details>

@@ -1,0 +1,23 @@
+{
+  "title": "Preact Router New Tab",
+  "tags": ["new-tab", "preact", "routing", "typescript"],
+  "difficulty": "beginner",
+  "timeToFirstSuccessMinutes": 3,
+  "firstSteps": [
+    "Run npm run dev to launch the extension",
+    "Open a new tab and follow the links to move between routes",
+    "Add a route in src/newtab/NewTabApp.tsx and it renders with no server"
+  ],
+  "useCases": [
+    "A multi-route new tab app with client-side routing",
+    "Hash routing in Preact inside an extension page",
+    "Reference for routing with no server under MV3"
+  ],
+  "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/preact",
+  "store": {
+    "summary": "Replaces your new tab page with a multi-route Preact app.",
+    "versionHistory": [
+      "1.0.0 (unreleased): initial version from the newtab-preact-router template. Not yet submitted to any store."
+    ]
+  }
+}

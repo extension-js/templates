@@ -1,0 +1,23 @@
+{
+  "title": "Preact Action (Popup)",
+  "tags": ["action", "popup", "preact", "typescript"],
+  "difficulty": "beginner",
+  "timeToFirstSuccessMinutes": 2,
+  "firstSteps": [
+    "Run npm run dev to launch the extension",
+    "Click the toolbar icon to open the action popup",
+    "Edit src/action/ActionApp.tsx and save to see fast refresh update it"
+  ],
+  "useCases": [
+    "A toolbar popup rendered by Preact",
+    "Quick actions that read and open tabs with no permission",
+    "Starting point for Preact extensions with a popup"
+  ],
+  "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/preact",
+  "store": {
+    "summary": "Adds a toolbar popup to the browser with a simple Preact page.",
+    "versionHistory": [
+      "1.0.0 (unreleased): initial version from the action-preact template. Not yet submitted to any store."
+    ]
+  }
+}
