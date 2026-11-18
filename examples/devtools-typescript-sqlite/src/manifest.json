@@ -5,10 +5,7 @@
   "version": "1.0.0",
   "firefox:browser_specific_settings": {
     "gecko": {
-      "id": "devtools-typescript-sqlite@extension.js",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
+      "id": "devtools-typescript-sqlite@extension.js"
     }
   },
   "name": "SQLite Request DevTools Panel Example",

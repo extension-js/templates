@@ -243,7 +243,7 @@ function firefoxDataCollection(manifest) {
   const declared = settings?.gecko?.data_collection_permissions
 
   if (!declared) {
-    return 'TODO add browser_specific_settings.gecko.data_collection_permissions to the manifest'
+    return 'TODO (declare browser_specific_settings.gecko.data_collection_permissions before submitting to addons.mozilla.org, see https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/)'
   }
 
   const required = (declared.required || []).filter((p) => p !== 'none')
@@ -291,7 +291,9 @@ export function renderStoreMd({manifest, packageJson, seed, slug}) {
   const singlePurpose = seed.singlePurpose || summary
   const license = packageJson?.license || 'TODO an SPDX identifier such as MIT'
   const language = manifest.default_locale || 'en'
-  const dataCollected = seed.dataCollected || 'none'
+  const dataCollected =
+    seed.dataCollected ||
+    "TODO (the extension's owner declares what it collects)"
   const bullets = requestedBullets(manifest)
   const justifications = seed.justifications || {}
   const reviewerHints = seed.reviewerHints ? ` ${seed.reviewerHints}` : ''
@@ -386,7 +388,7 @@ export function renderStoreMd({manifest, packageJson, seed, slug}) {
     ),
     ...bullet('Data collected', dataCollected),
     ...note(
-      'Every kind of data the extension collects, stores or sends, or none. Chrome, Edge and Apple each ask it again on their dashboards.'
+      'Every kind of data the extension collects, stores or sends, as its owner declares it. Chrome, Edge and Apple each ask it again on their dashboards.'
     ),
     ...bullet('Firefox data collection', firefoxDataCollection(manifest)),
     ...note(
@@ -409,7 +411,7 @@ export function renderStoreMd({manifest, packageJson, seed, slug}) {
     ),
     ...bullet(
       'App Store',
-      'App Privacy, "Data Not Collected" when the line above says none, answered by hand in App Store Connect.'
+      'App Privacy, answered by hand in App Store Connect from the Data collected line above.'
     ),
     '',
     '## Chrome Web Store',

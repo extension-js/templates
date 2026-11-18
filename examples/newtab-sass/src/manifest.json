@@ -5,10 +5,7 @@
   "version": "1.0.0",
   "firefox:browser_specific_settings": {
     "gecko": {
-      "id": "newtab-sass@extension.js",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
+      "id": "newtab-sass@extension.js"
     }
   },
   "name": "Sass New Tab Example",

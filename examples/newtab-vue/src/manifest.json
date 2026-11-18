@@ -5,10 +5,7 @@
   "version": "1.0.0",
   "firefox:browser_specific_settings": {
     "gecko": {
-      "id": "newtab-vue@extension.js",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
+      "id": "newtab-vue@extension.js"
     }
   },
   "name": "Vue New Tab Example",
