@@ -1,0 +1,91 @@
+[powered-image]: https://img.shields.io/badge/Powered%20by-Extension.js-0971fe
+[powered-url]: https://extension.js.org
+
+![Powered by Extension.js][powered-image]
+
+# Vue Action Popup Example
+
+> Adds a toolbar popup to the browser with a simple Vue page.
+
+![screenshot](./screenshot.png)
+
+**What you'll see**: A toolbar popup that opens when you click the extension's icon.
+
+**How it works**: The manifest registers an `action` and points `default_popup` at a Vue + TypeScript page bundled from `src/action/`.
+
+The popup is one single-file component, `ActionApp.vue`. Its button counts clicks with a `ref`, so you can see Vue reactivity working inside the popup. The count starts over each time the popup opens, because a popup page is created fresh on every click of the toolbar icon.
+
+## Try it locally
+
+```bash
+npx extension@latest create my-action-vue --template action-vue
+cd my-action-vue
+npm install
+npm run dev
+```
+
+A fresh browser window opens with the extension already loaded.
+
+## Project layout
+
+```
+src/
+├── action/
+│   ├── ActionApp.vue
+│   ├── index.html
+│   ├── scripts.ts
+│   ├── shims-vue.d.ts
+│   └── styles.css
+├── images/
+│   ├── icon-128.png
+│   ├── icon-16.png
+│   ├── icon-32.png
+│   ├── icon-48.png
+│   ├── icon-64.png
+│   └── icon.png
+├── background.js
+└── manifest.json
+```
+
+## Commands
+
+Cloned this repo instead? The examples ship without npm scripts, so run Extension.js directly from the example directory. Run `npm install` first when the example declares dependencies.
+
+### dev
+
+Run the extension in development mode. Target a browser with `--browser`:
+
+```bash
+npx extension@latest dev .                  # Chromium (default)
+npx extension@latest dev . --browser=chrome
+npx extension@latest dev . --browser=edge
+npx extension@latest dev . --browser=firefox
+```
+
+### build
+
+Build for production:
+
+```bash
+npx extension@latest build .                # Chromium (default)
+npx extension@latest build . --browser=firefox
+npx extension@latest build . --browser=edge
+```
+
+### preview
+
+Preview the production build with the bundled browser:
+
+```bash
+npx extension@latest preview .
+```
+
+## Tests
+
+This template ships an end-to-end check (`template.spec.ts`) validated by the examples-repo CI on every commit.
+
+## Learn more
+
+- [Extension.js docs](https://extension.js.org)
+- [Templates index](https://extension.js.org/docs/getting-started/templates)
+- [GitHub: extension-js/extension.js](https://github.com/extension-js/extension.js)

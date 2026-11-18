@@ -616,6 +616,35 @@ const OVERRIDES = {
       "The popup pulls strings from the user's active locale; add another " +
       '`_locales/<lang>/messages.json` to localize.'
   },
+  'action-preact': {
+    whatYoullSee:
+      "A toolbar popup that opens when you click the extension's icon. " +
+      'It counts the tabs open in the current window and opens a new one ' +
+      'from a button.',
+    howItWorks:
+      'The manifest registers an `action` and points `default_popup` at a ' +
+      'Preact + TypeScript page bundled from `src/action/`. The count is a ' +
+      'signal from `@preact/signals`, read with `chrome.tabs.query` and ' +
+      'kept current by the tab events. Neither call needs a permission.'
+  },
+  'action-svelte': {
+    whatYoullSee:
+      "A toolbar popup that opens when you click the extension's icon, " +
+      'with a button that counts your clicks on the toolbar badge.',
+    howItWorks:
+      'The manifest registers an `action` and points `default_popup` at a ' +
+      'Svelte + TypeScript page bundled from `src/action/`. The button ' +
+      'calls `setBadgeText`, so the count stays on the toolbar icon after ' +
+      'the popup closes.'
+  },
+  'action-vue': {
+    extra:
+      'The popup is one single-file component, `ActionApp.vue`. Its button ' +
+      'counts clicks with a `ref`, so you can see Vue reactivity working ' +
+      'inside the popup. The count starts over each time the popup opens, ' +
+      'because a popup page is created fresh on every click of the toolbar ' +
+      'icon.'
+  },
   'newtab-config-eslint': {
     extra:
       'Includes a working ESLint config alongside the extension. Lint your ' +
@@ -645,6 +674,43 @@ const OVERRIDES = {
     extra:
       'A new-tab page driven by [React Router](https://reactrouter.com/). ' +
       'Useful for extension UIs that span multiple in-app routes.'
+  },
+  'newtab-preact-router': {
+    title: 'Preact Router New Tab Example',
+    whatYoullSee:
+      'A custom new-tab page replacing the browser default, with links ' +
+      'that move between three routes.',
+    extra:
+      'A new-tab page driven by [wouter](https://github.com/molefrog/wouter) ' +
+      'through its `wouter-preact` package. An extension page has no ' +
+      'server, so the routes live in the URL hash: every route loads from ' +
+      'the same HTML file and still renders after a reload. Useful for ' +
+      'extension UIs that span multiple in-app routes.'
+  },
+  'newtab-svelte-router': {
+    title: 'Svelte Router New Tab Example',
+    extra:
+      'A new-tab page driven by ' +
+      '[svelte-spa-router](https://github.com/ItalyPaleAle/svelte-spa-router). ' +
+      'Routes live in the URL hash, so they work with no server and ' +
+      'survive a reload. Useful for extension UIs that span multiple ' +
+      'in-app routes.\n\n' +
+      'svelte-spa-router publishes its components under the `svelte` ' +
+      'export condition. `extension.config.js` adds that condition to the ' +
+      'resolver so the build can find them.'
+  },
+  'newtab-vue-router': {
+    title: 'Vue Router New Tab Example',
+    whatYoullSee:
+      'A custom new-tab page replacing the browser default, with Home, ' +
+      'About and Users links.',
+    extra:
+      'A new-tab page driven by [Vue Router](https://router.vuejs.org/). ' +
+      'Useful for extension UIs that span multiple in-app routes. The ' +
+      'routes live in `src/newtab/router.ts` and use hash history, because ' +
+      'an extension page has no server to answer a path: the route stays ' +
+      'after the `#`, so a reload or a bookmarked URL renders the same ' +
+      'route. An unknown route goes back to Home.'
   },
   'newtab-browser-flags': {
     extra:

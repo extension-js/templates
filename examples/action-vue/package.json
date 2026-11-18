@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "action-vue",
+  "description": "Adds a toolbar popup to the browser with a simple Vue page.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "vue": "3.5.45"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}

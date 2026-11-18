@@ -1,0 +1,23 @@
+{
+  "title": "Svelte Action (Popup)",
+  "tags": ["action", "popup", "svelte", "typescript"],
+  "difficulty": "beginner",
+  "timeToFirstSuccessMinutes": 2,
+  "firstSteps": [
+    "Run npm run dev to launch the extension",
+    "Click the toolbar icon to open the action popup",
+    "Edit src/action/ActionApp.svelte and save to watch it update"
+  ],
+  "useCases": [
+    "Toolbar popup rendered by Svelte as the primary UI surface",
+    "Quick actions that update the toolbar badge from the popup",
+    "Starting point for Svelte extensions with a popup"
+  ],
+  "docsUrl": "https://extension.js.org/docs/languages-and-frameworks/svelte",
+  "store": {
+    "summary": "Adds a toolbar popup to the browser with a simple Svelte page.",
+    "versionHistory": [
+      "1.0.0 (unreleased): initial version from the action-svelte template. Not yet submitted to any store."
+    ]
+  }
+}

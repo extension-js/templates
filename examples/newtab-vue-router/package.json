@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "newtab-vue-router",
+  "description": "Replaces your new tab page with a small Vue app you can navigate across routes.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "vue": "3.5.45",
+    "vue-router": "5.5.1"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "action-preact",
+  "description": "Adds a toolbar popup to the browser with a simple Preact page.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@preact/signals": "2.11.4",
+    "preact": "11.2.0"
+  },
+  "devDependencies": {
+    "@prefresh/core": "1.5.11",
+    "@types/chrome": "0.3.7",
+    "typescript": "7.0.2"
+  }
+}

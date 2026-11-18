@@ -10,7 +10,15 @@ const EXEMPT = new Set([
   'newtab-browser-flags'
 ])
 
-const AWAITING_FIRST_SHOOT = new Set(['devtools-typescript-sqlite'])
+const AWAITING_FIRST_SHOOT = new Set([
+  'action-preact',
+  'action-svelte',
+  'action-vue',
+  'devtools-typescript-sqlite',
+  'newtab-preact-router',
+  'newtab-svelte-router',
+  'newtab-vue-router'
+])
 
 const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/
 
