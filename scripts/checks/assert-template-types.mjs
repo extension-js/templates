@@ -16,6 +16,11 @@ const ENV_SOURCE =
   '/// <reference types="extension/types" />\n' +
   '/// <reference types="extension/types/polyfill" />\n'
 
+// The bundler makes every entry its own module. A file with no import must be
+// one to tsc as well, or a top-level name like status collides with the DOM.
+const PROBE_FILE = 'module-scope-probe.ts'
+const PROBE_SOURCE = 'const status = 1\n'
+
 const only = (
   process.argv.find((arg) => arg.startsWith('--only=')) || ''
 ).slice('--only='.length)
@@ -49,8 +54,11 @@ function check(name) {
   const cwd = path.join(EXAMPLES, name)
   const envPath = path.join(cwd, ENV_FILE)
   const wroteEnv = !fs.existsSync(envPath)
+  const probePath = path.join(cwd, PROBE_FILE)
 
   if (wroteEnv) fs.writeFileSync(envPath, ENV_SOURCE)
+
+  fs.writeFileSync(probePath, PROBE_SOURCE)
 
   return new Promise((resolve) => {
     const child = spawn(process.execPath, [TSC, '--noEmit', '-p', '.'], {cwd})
@@ -62,6 +70,8 @@ function check(name) {
     child.on('close', (code) => {
       // Leave a checkout as it was: the file is the CLI's to write.
       if (wroteEnv) fs.rmSync(envPath, {force: true})
+
+      fs.rmSync(probePath, {force: true})
 
       resolve({name, ok: code === 0, output: output.trim()})
     })
