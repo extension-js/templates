@@ -5,14 +5,7 @@
   "version": "1.0.0",
   "firefox:browser_specific_settings": {
     "gecko": {
-      "id": "ai-chatgpt@extension.js",
-      "data_collection_permissions": {
-        "required": [
-          "authenticationInfo",
-          "personalCommunications",
-          "websiteContent"
-        ]
-      }
+      "id": "ai-chatgpt@extension.js"
     }
   },
   "name": "ChatGPT (OpenAI) Sidebar",

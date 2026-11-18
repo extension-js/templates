@@ -5,10 +5,7 @@
   "version": "1.0.0",
   "firefox:browser_specific_settings": {
     "gecko": {
-      "id": "action@extension.js",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
+      "id": "action@extension.js"
     }
   },
   "name": "JavaScript Action Example",
