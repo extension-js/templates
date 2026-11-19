@@ -8,6 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
     "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "bundler",
     "module": "esnext",
