@@ -1,3 +1,4 @@
+import type {TargetedEvent} from 'preact'
 import {useSignal} from '@preact/signals'
 import {useEffect} from 'preact/hooks'
 import preactLogo from '../images/preact.png'
@@ -19,8 +20,8 @@ export default function OptionsApp() {
     })
   }, [])
 
-  function onToggle(event: Event) {
-    const checked = (event.currentTarget as HTMLInputElement).checked
+  function onToggle(event: TargetedEvent<HTMLInputElement>) {
+    const checked = event.currentTarget.checked
     const nextValue: BadgePosition = checked ? 'left' : 'right'
     badgePosition.value = nextValue
     // The content script listens for this write, so the overlay changes edge

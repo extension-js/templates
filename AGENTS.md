@@ -45,16 +45,20 @@ Every content_script entrypoint in this repo carries a JSDoc above its default e
 ## Layout
 
 ```
-examples/
-├── examples/<name>/        # one example per directory
-│   ├── src/
-│   │   ├── manifest.json   # entrypoint declarations (source paths)
-│   │   ├── background.js   # optional
-│   │   └── content/        # content scripts (default-export contract)
-│   ├── extension.config.js # optional Extension.js config
-│   └── package.json
-├── scripts/                # repo-wide tooling
-└── playwright.config.ts    # E2E tests run per example
+.
+├── examples/
+│   ├── <name>/                 # one example per directory
+│   │   ├── src/
+│   │   │   ├── manifest.json   # entrypoint declarations (source paths)
+│   │   │   ├── background.js   # optional
+│   │   │   └── content/        # content scripts (default-export contract)
+│   │   ├── extension.config.js # optional Extension.js config
+│   │   ├── template.spec.ts    # the example's E2E spec
+│   │   └── package.json
+│   └── *.spec.ts, *-fixtures.ts # specs and fixtures shared by every example
+├── scripts/                    # repo-wide tooling (build, catalog, checks)
+├── templates-meta.json         # generated catalog artifact
+└── playwright.config.ts        # E2E tests run per example
 ```
 
 ## Common commands
