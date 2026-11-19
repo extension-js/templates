@@ -291,7 +291,7 @@ jobs:
         if: ${{ inputs.cli-version != '' }}
         run: node scripts/checks/pin-cli-under-test.mjs
 
-      - run: pnpm run test:content-react
+      # Scaffolds every template, content-react included, with the pinned CLI.
       - run: pnpm run test:create-dev-workflow:all-templates
 
   # ──────────────────────────────────────────────────────────────────────────
@@ -345,7 +345,6 @@ jobs:
           EXT_BROWSERS_CACHE_DIR: ${{ runner.temp }}/extension-browsers
         run: pnpm exec extension install chromium --output json
 
-      - run: pnpm run test:content-react
       # Windows is ~4x slower than Linux for create+dev workflows.
       # Run a representative subset to stay within the 60-min timeout.
       - run: pnpm run test:create-dev-workflow -- '--examples=content,content-react,content-vue,content-svelte,content-typescript,javascript,react'
