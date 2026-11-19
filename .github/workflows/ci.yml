@@ -326,6 +326,7 @@ jobs:
           bun-version: ${{ env.BUN_VERSION }}
 
       - name: Restore node_modules
+        id: modules
         uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
           path: |
@@ -333,8 +334,19 @@ jobs:
             examples/*/node_modules
           key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}${{ inputs.cli-version && format('-cli-{0}', inputs.cli-version) || '' }}
 
+      # Only the Linux setup job seeds node_modules, so Windows installs on a miss.
+      - run: pnpm install
+        if: ${{ inputs.cli-version == '' && steps.modules.outputs.cache-hit != 'true' }}
+
+      - name: Install with the CLI under test
+        if: ${{ inputs.cli-version != '' && steps.modules.outputs.cache-hit != 'true' }}
+        run: |
+          node scripts/checks/pin-cli-under-test.mjs --before-install
+          pnpm install --no-frozen-lockfile --config.minimum-release-age=0
+          node scripts/checks/pin-cli-under-test.mjs --installed
+
       - name: Pin the CLI under test
-        if: ${{ inputs.cli-version != '' }}
+        if: ${{ inputs.cli-version != '' && steps.modules.outputs.cache-hit == 'true' }}
         run: node scripts/checks/pin-cli-under-test.mjs
 
       # No other lane installs a browser through the CLI, so a release is
