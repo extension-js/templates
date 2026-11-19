@@ -215,7 +215,7 @@ jobs:
   optional-deps-guards:
     needs: setup
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -246,6 +246,13 @@ jobs:
 
       - run: pnpm run test:stable-install-modes
       - run: pnpm run test:stable-pnpm-postcss-repro
+      # The installed CLI must load its own extension-develop, never one
+      # from an outer workspace.
+      - run: pnpm run test:canary-runtime-installed
+      # Strict linkers hide undeclared dependencies that the hoisted
+      # install above would resolve by accident.
+      - run: pnpm run test:yarn-pnp-dev
+      - run: pnpm run test:pnpm-monorepo-dev
 
   # ──────────────────────────────────────────────────────────────────────────
   # Create + first-dev workflow (Linux)
