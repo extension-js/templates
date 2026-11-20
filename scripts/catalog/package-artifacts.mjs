@@ -149,10 +149,21 @@ for (const slug of fs.readdirSync(examplesDir)) {
   }
 }
 
+const packagedCount = Object.keys(artifactsIndex).length
+
+// An empty index once shipped because nothing here noticed that no
+// example had a dist folder. Refuse it so the caller fails instead.
+if (packagedCount === 0) {
+  console.error(
+    `►►► No template had a build under examples/<slug>/dist/<browser>. ` +
+      `Run "pnpm run build:examples" first.`
+  )
+
+  process.exit(1)
+}
+
 const indexPath = path.join(outDir, 'index.json')
 
 fs.writeFileSync(indexPath, JSON.stringify(artifactsIndex, null, 2))
 
-console.log(
-  `►►► Wrote ${indexPath} (${Object.keys(artifactsIndex).length} templates)`
-)
+console.log(`►►► Wrote ${indexPath} (${packagedCount} templates)`)
