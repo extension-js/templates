@@ -55,6 +55,20 @@ function main() {
   }
 
   const templatesMetadata = readJSON(META_PATH)
+
+  // The website serves this file, so an empty catalog would publish a blank
+  // gallery. Fail the run and keep the committed one instead.
+  if (
+    !Array.isArray(templatesMetadata.templates) ||
+    templatesMetadata.templates.length === 0
+  ) {
+    console.error(
+      '►►► templates-meta.json lists no templates. Refusing to stage an empty catalog.'
+    )
+
+    process.exit(1)
+  }
+
   templatesMetadata.commit = 'main'
 
   templatesMetadata.templates = (templatesMetadata.templates || []).map(

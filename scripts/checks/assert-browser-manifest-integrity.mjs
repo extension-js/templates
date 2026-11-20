@@ -294,6 +294,7 @@ function validate(slug, target, result) {
     lower.includes('compiled successfully') ||
     lower.includes('compiled in ') ||
     lower.includes('compiled with warnings') ||
+    / compiled with \d+ warnings? in /.test(lower) ||
     lower.includes('ready for development')
 
   if (!compiledOk) problems.push('build did not report a successful compile')
