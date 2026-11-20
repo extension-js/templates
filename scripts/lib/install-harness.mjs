@@ -15,7 +15,9 @@ export const SECOND_RUN_HINT = 'Run the command again to proceed'
 export const COMPILE_SUCCESS_HINTS = [
   'compiled successfully',
   'compiled in ',
-  'compiled with warnings'
+  'compiled with warnings',
+  // 4.2.0 counts the findings: "compiled with 1 warning in 316 ms."
+  / compiled with \d+ warnings? in /
 ]
 export const READY_HINT = 'Extension ready for development'
 
@@ -271,7 +273,9 @@ export function runDevUntilReady(
         return
       }
 
-      if (COMPILE_SUCCESS_HINTS.some((hint) => output.includes(hint))) {
+      if (COMPILE_SUCCESS_HINTS.some((hint) =>
+          typeof hint === 'string' ? output.includes(hint) : hint.test(output)
+        )) {
         sawCompile = true
       }
 

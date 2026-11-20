@@ -57,7 +57,7 @@ const devFailurePatterns = [
 ]
 
 const compileSuccessPattern =
-  /compiled (successfully|in \d+\s*ms)|compiled with warnings/i
+  /compiled (successfully|in \d+\s*ms)|compiled with (warnings|\d+ warnings? in)/i
 const readyPattern = /Extension ready for development/i
 const POST_READY_STABILIZATION_MS = 2500
 
