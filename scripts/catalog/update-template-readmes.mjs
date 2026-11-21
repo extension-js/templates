@@ -559,7 +559,7 @@ const OVERRIDES = {
     // the generic lines (a content script UI in a Shadow DOM) would be wrong.
     whatYoullSee:
       'A side panel that runs 🤗 Transformers in your browser: type in the ' +
-      'text box and the classification appears below it as you type.',
+      'text box and the classification appears below it when you pause, or press Enter.',
     howItWorks:
       'The same demo as the [Transformers.js browser extension sample]' +
       '(https://github.com/huggingface/transformers.js-examples/tree/main/browser-extension), ' +
