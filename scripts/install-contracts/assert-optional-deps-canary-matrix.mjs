@@ -7,6 +7,7 @@ import {
   examplesRoot,
   getExtensionSpec,
   hasBuiltManifest,
+  hasLockfile,
   parseExamplesArg,
   prepTempExample,
   run as runWithEnv
@@ -36,7 +37,10 @@ const defaultExamples = [
 const RUN_ENV = {
   CI: 'true',
   PNPM_CONFIG_FROZEN_LOCKFILE: 'false',
-  npm_config_frozen_lockfile: 'false'
+  npm_config_frozen_lockfile: 'false',
+  // pnpm 11+ fails on ignored build scripts (@parcel/watcher here), which
+  // assert-stable-install-modes.mjs already turns back into a warning.
+  PNPM_CONFIG_STRICT_DEP_BUILDS: 'false'
 }
 
 function run(command, args, cwd) {
@@ -45,6 +49,16 @@ function run(command, args, cwd) {
 
 async function installDeps(exampleDir) {
   if (packageManager === 'pnpm') {
+    if (!hasLockfile('pnpm', exampleDir)) {
+      const fresh = await run(
+        'pnpm',
+        ['install', '--no-frozen-lockfile'],
+        exampleDir
+      )
+
+      return fresh.code
+    }
+
     let result = await run('pnpm', ['install', '--frozen-lockfile'], exampleDir)
 
     if (result.code !== 0) {
@@ -69,6 +83,12 @@ async function installDeps(exampleDir) {
   }
 
   if (packageManager === 'yarn') {
+    if (!hasLockfile('yarn', exampleDir)) {
+      const fresh = await run('yarn', ['install'], exampleDir)
+
+      return fresh.code
+    }
+
     let result = await run('yarn', ['install', '--immutable'], exampleDir)
 
     if (result.code !== 0) {
@@ -76,6 +96,12 @@ async function installDeps(exampleDir) {
     }
 
     return result.code
+  }
+
+  if (!hasLockfile('bun', exampleDir)) {
+    const fresh = await run('bun', ['install'], exampleDir)
+
+    return fresh.code
   }
 
   let result = await run('bun', ['install', '--frozen-lockfile'], exampleDir)
