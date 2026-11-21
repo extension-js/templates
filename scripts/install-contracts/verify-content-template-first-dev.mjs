@@ -5,6 +5,7 @@ import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import process from 'node:process'
+import {getExtensionSpec} from '../lib/install-harness.mjs'
 
 const args = process.argv.slice(2)
 
@@ -22,7 +23,9 @@ function hasFlag(name) {
   return args.includes(name)
 }
 
-const cliPackage = parseArg('--package', 'extension@latest')
+// Default to the CLI the repository pins, which a release gate run rewrites to
+// the version under test. `@latest` would test whatever npm serves instead.
+const cliPackage = parseArg('--package', `extension@${getExtensionSpec()}`)
 const browser = parseArg('--browser', 'chromium')
 const defaultTimeoutMs = process.platform === 'win32' ? '360000' : '180000'
 const timeoutMs = Number(parseArg('--timeout-ms', defaultTimeoutMs))
@@ -93,7 +96,7 @@ function createProjectName(template) {
 }
 
 // Pin known-broken transitive versions so the first-dev test can run against
-// the currently published `extension@latest` tree even when an upstream patch
+// the pinned `extension` tree even when an upstream patch
 // release ships a corrupted tarball. Each entry below is annotated with the
 // upstream issue / date so we can drop it once the broken version is yanked
 // or the next published `extension-develop` already encodes the same pin.

@@ -83,11 +83,13 @@ A failed local run exits on its own and leaves its HTML report in `e2e-report/`.
 
 ## Artifact pipeline (templates-meta.json)
 
-The committed `templates-meta.json` is a post-stage artifact. CI produces it
-in four steps: `build:examples`, then `artifacts:package`, then `generate:raw`,
-then `artifacts:stage`. The stage step rewrites the raw generator output
-(commit becomes `main`, file paths gain the `examples/<slug>/` prefix,
-`repositoryUrl` is added).
+The committed `templates-meta.json` is a post-stage artifact. The publish
+workflow produces it from the source tree in two steps: `generate:raw`, then
+`artifacts:stage`. The stage step rewrites the raw generator output (commit
+becomes `main`, file paths gain the `examples/<slug>/` prefix, `repositoryUrl`
+is added) and fails when the catalog lists no templates. Locally,
+`artifacts:prepare` also builds and zips every template first, and the zip
+step fails when no template has a build.
 
 - To regenerate the committed artifacts locally, run `pnpm artifacts:prepare`.
   Never run `pnpm generate` alone for this: the raw generator writes the
