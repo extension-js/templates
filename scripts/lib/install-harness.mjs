@@ -98,6 +98,20 @@ export function prepTempExample(slug) {
   return {tempRoot, exampleDir}
 }
 
+const LOCKFILES = {
+  pnpm: ['pnpm-lock.yaml'],
+  yarn: ['yarn.lock'],
+  bun: ['bun.lock', 'bun.lockb']
+}
+
+// A scratch copy of an example has no lockfile, and a frozen install there
+// fails by design (ERR_PNPM_NO_LOCKFILE under CI), so callers skip it.
+export function hasLockfile(pm, dir) {
+  return (LOCKFILES[pm] || []).some((name) =>
+    fs.existsSync(path.join(dir, name))
+  )
+}
+
 export function hasBuiltManifest(dir, channels = CHROME_CHANNELS) {
   for (const root of OUTPUT_ROOTS) {
     for (const channel of channels) {
@@ -273,9 +287,11 @@ export function runDevUntilReady(
         return
       }
 
-      if (COMPILE_SUCCESS_HINTS.some((hint) =>
+      if (
+        COMPILE_SUCCESS_HINTS.some((hint) =>
           typeof hint === 'string' ? output.includes(hint) : hint.test(output)
-        )) {
+        )
+      ) {
         sawCompile = true
       }
 
