@@ -5,6 +5,7 @@ import {
   SECOND_RUN_HINT,
   getExtensionSpec,
   hasBuiltManifest,
+  hasLockfile,
   parseExamplesArg,
   prepTempExample,
   run as runWithEnv
@@ -90,6 +91,16 @@ async function installDependencies(pm, exampleDir) {
   }
 
   if (pm === 'pnpm') {
+    if (!hasLockfile('pnpm', exampleDir)) {
+      const fresh = await run(
+        'pnpm',
+        ['install', '--no-frozen-lockfile'],
+        exampleDir
+      )
+
+      return fresh.code === 0
+    }
+
     let result = await run('pnpm', ['install', '--frozen-lockfile'], exampleDir)
 
     if (result.code !== 0) {
@@ -104,6 +115,12 @@ async function installDependencies(pm, exampleDir) {
   }
 
   if (pm === 'yarn') {
+    if (!hasLockfile('yarn', exampleDir)) {
+      const fresh = await run('yarn', ['install'], exampleDir)
+
+      return fresh.code === 0
+    }
+
     let result = await run('yarn', ['install', '--immutable'], exampleDir)
 
     if (result.code !== 0) {
@@ -111,6 +128,12 @@ async function installDependencies(pm, exampleDir) {
     }
 
     return result.code === 0
+  }
+
+  if (!hasLockfile('bun', exampleDir)) {
+    const fresh = await run('bun', ['install'], exampleDir)
+
+    return fresh.code === 0
   }
 
   let result = await run('bun', ['install', '--frozen-lockfile'], exampleDir)

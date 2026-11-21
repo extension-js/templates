@@ -34,7 +34,8 @@ const LINKERS = {
       "Can't resolve '@rspack/core",
       "Can't resolve 'Extension.js/hot/dev-server"
     ],
-    env: COREPACK_ENV,
+    // The scratch copy writes a fresh yarn.lock, which Yarn refuses on CI by default.
+    env: {...COREPACK_ENV, YARN_ENABLE_IMMUTABLE_INSTALLS: 'false'},
     prepare(workDir, extensionSpec) {
       for (const junk of ['node_modules', 'dist', '.extension', '.yarn']) {
         fs.rmSync(path.join(workDir, junk), {recursive: true, force: true})
