@@ -9,7 +9,7 @@
     }
   },
   "name": "Less Modules Content Example",
-  "description": "Injects a small styled badge into every web page you visit, with a Less modules options page that moves it to the left or right edge.",
+  "description": "Injects a small styled badge into every web page, with a Less modules options page that moves it to the left or right edge.",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",

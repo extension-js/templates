@@ -9,7 +9,7 @@
     }
   },
   "name": "Main World Content Example",
-  "description": "Injects a small UI into every web page from both the extension and the page's own JavaScript world, with an options page that moves it to the left or right edge.",
+  "description": "Injects a small UI into every page from the extension and the page world, with an options page that moves it left or right.",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",

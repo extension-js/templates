@@ -5,7 +5,7 @@
 
 # JavaScript Content Script Example
 
-> Injects a small styled badge into every web page you visit, with a Sass modules options page that moves it to the left or right edge.
+> Injects a small styled badge into every web page, with a Sass modules options page that moves it to the left or right edge.
 
 ![screenshot](./screenshot.png)
 

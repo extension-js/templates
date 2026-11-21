@@ -1013,7 +1013,7 @@
       "title": "Content Less Modules",
       "version": "1.0.0",
       "manifest_version": 3,
-      "description": "Injects a small styled badge into every web page you visit, with a Less modules options page that moves it to the left or right edge.",
+      "description": "Injects a small styled badge into every web page, with a Less modules options page that moves it to the left or right edge.",
       "uiContext": ["content", "options", "background"],
       "surfaces": ["content", "options", "background"],
       "entrypoints": [
@@ -1080,7 +1080,7 @@
       "title": "Main-world Content Script",
       "version": "1.0.0",
       "manifest_version": 3,
-      "description": "Injects a small UI into every web page from both the extension and the page's own JavaScript world, with an options page that moves it to the left or right edge.",
+      "description": "Injects a small UI into every page from the extension and the page world, with an options page that moves it left or right.",
       "uiContext": ["content", "options", "background"],
       "surfaces": ["content", "options", "background"],
       "entrypoints": [
@@ -1541,7 +1541,7 @@
       "title": "Content scripts with Sass modules",
       "version": "1.0.0",
       "manifest_version": 3,
-      "description": "Injects a small styled badge into every web page you visit, with a Sass modules options page that moves it to the left or right edge.",
+      "description": "Injects a small styled badge into every web page, with a Sass modules options page that moves it to the left or right edge.",
       "uiContext": ["content", "options", "background"],
       "surfaces": ["content", "options", "background"],
       "entrypoints": [

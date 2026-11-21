@@ -841,7 +841,7 @@ npx extension@latest create my-extension --template javascript
 <details>
   <summary><img src="./examples/content-less-modules/src/images/icon.png" alt="content-less-modules example icon" width="22" /> Content Less Modules Example</summary>
 
-> Injects a small styled badge into every web page you visit, with a Less modules options page that moves it to the left or right edge.
+> Injects a small styled badge into every web page, with a Less modules options page that moves it to the left or right edge.
 
   <table>
     <tr>
@@ -864,7 +864,7 @@ npx extension@latest create my-extension --template javascript
 <details>
   <summary><img src="./examples/content-main-world/src/images/icon.png" alt="content-main-world example icon" width="22" /> Content Main World Example</summary>
 
-> Injects a small UI into every web page from both the extension and the page's own JavaScript world, with an options page that moves it to the left or right edge.
+> Injects a small UI into every page from the extension and the page world, with an options page that moves it left or right.
 
   <table>
     <tr>
@@ -1002,7 +1002,7 @@ npx extension@latest create my-extension --template javascript
 <details>
   <summary><img src="./examples/content-sass-modules/src/images/icon.png" alt="content-sass-modules example icon" width="22" /> Content Sass Modules Example</summary>
 
-> Injects a small styled badge into every web page you visit, with a Sass modules options page that moves it to the left or right edge.
+> Injects a small styled badge into every web page, with a Sass modules options page that moves it to the left or right edge.
 
   <table>
     <tr>

@@ -5,7 +5,7 @@
 
 # Content Script in MAIN World Example
 
-> Injects a small UI into every web page from both the extension and the page's own JavaScript world, with an options page that moves it to the left or right edge.
+> Injects a small UI into every page from the extension and the page world, with an options page that moves it left or right.
 
 ![screenshot](./screenshot.png)
 
