@@ -32,7 +32,7 @@ const installedExtensionDevelopRoot = path.join(
 
 if (!fs.existsSync(installedExtensionBin)) {
   console.error(`✖ Canary not installed: missing ${installedExtensionBin}`)
-  console.error('  Run `pnpm install` in _FUTURE/examples first.')
+  console.error('  Run `pnpm install` at the repository root first.')
 
   process.exit(1)
 }
@@ -143,10 +143,21 @@ if (!match) {
 }
 
 const resolvedRaw = match[1].trim()
-const resolvedPath = resolvedRaw.startsWith('file://')
-  ? fileURLToPath(resolvedRaw)
-  : resolvedRaw
-const expectedPrefix = installedExtensionDevelopRoot + path.sep
+
+// pnpm links node_modules/extension-develop into node_modules/.pnpm, and Node
+// loads the real path, so both sides are compared as real paths.
+function realPath(filePath) {
+  try {
+    return fs.realpathSync(filePath)
+  } catch {
+    return filePath
+  }
+}
+
+const resolvedPath = realPath(
+  resolvedRaw.startsWith('file://') ? fileURLToPath(resolvedRaw) : resolvedRaw
+)
+const expectedPrefix = realPath(installedExtensionDevelopRoot) + path.sep
 
 if (!resolvedPath.startsWith(expectedPrefix)) {
   console.error(
