@@ -6,14 +6,14 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "5"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "5.3.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@types/react-router-dom": "^5.3.3",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "@types/react-router-dom": "5.3.3",
     "typescript": "7.0.2"
   }
 }

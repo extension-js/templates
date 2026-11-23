@@ -125,10 +125,10 @@ importers:
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.17)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       autoprefixer:
         specifier: ^10.4.20
@@ -183,10 +183,10 @@ importers:
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.17)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       autoprefixer:
         specifier: ^10.4.20
@@ -244,10 +244,10 @@ importers:
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.17)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       autoprefixer:
         specifier: ^10.4.20
@@ -305,10 +305,10 @@ importers:
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.17)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       autoprefixer:
         specifier: ^10.4.20
@@ -375,23 +375,23 @@ importers:
   examples/content-preact:
     dependencies:
       '@preact/signals':
-        specifier: ^1.2.3
+        specifier: 1.3.2
         version: 1.3.2(preact@10.27.3)
       preact:
-        specifier: ^10.22.0
+        specifier: 10.27.3
         version: 10.27.3
     devDependencies:
       '@prefresh/core':
-        specifier: ^1.5.2
-        version: 1.5.9(preact@10.27.3)
+        specifier: 1.5.11
+        version: 1.5.11(preact@10.27.3)
       '@tailwindcss/postcss':
         specifier: ^4.1.3
         version: 4.1.17
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       tailwindcss:
         specifier: ^4.1.3
@@ -403,20 +403,20 @@ importers:
   examples/content-react:
     dependencies:
       react:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.1.3
         version: 4.1.17
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       tailwindcss:
         specifier: ^4.1.3
@@ -465,8 +465,8 @@ importers:
   examples/content-vue:
     dependencies:
       vue:
-        specifier: ^3.4.27
-        version: 3.5.26(typescript@7.0.2)
+        specifier: 3.5.45
+        version: 3.5.45(typescript@7.0.2)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.1.3
@@ -483,20 +483,20 @@ importers:
   examples/devtools-preact:
     dependencies:
       '@preact/signals':
-        specifier: ^1.2.3
+        specifier: 1.3.2
         version: 1.3.2(preact@10.27.3)
       preact:
-        specifier: ^10.22.0
+        specifier: 10.27.3
         version: 10.27.3
     devDependencies:
       '@prefresh/core':
-        specifier: ^1.5.2
-        version: 1.5.9(preact@10.27.3)
+        specifier: 1.5.11
+        version: 1.5.11(preact@10.27.3)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       typescript:
         specifier: 7.0.2
@@ -505,17 +505,17 @@ importers:
   examples/devtools-react:
     dependencies:
       react:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       typescript:
         specifier: 7.0.2
@@ -553,8 +553,8 @@ importers:
   examples/devtools-vue:
     dependencies:
       vue:
-        specifier: ^3.4.27
-        version: 3.5.26(typescript@7.0.2)
+        specifier: 3.5.45
+        version: 3.5.45(typescript@7.0.2)
     devDependencies:
       typescript:
         specifier: 7.0.2
@@ -621,20 +621,20 @@ importers:
   examples/newtab-preact:
     dependencies:
       '@preact/signals':
-        specifier: ^1.3.0
+        specifier: 1.3.2
         version: 1.3.2(preact@10.27.3)
       preact:
-        specifier: ^10.22.0
+        specifier: 10.27.3
         version: 10.27.3
     devDependencies:
       '@prefresh/core':
-        specifier: ^1.5.2
-        version: 1.5.9(preact@10.27.3)
+        specifier: 1.5.11
+        version: 1.5.11(preact@10.27.3)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       typescript:
         specifier: 7.0.2
@@ -659,17 +659,17 @@ importers:
   examples/newtab-react:
     dependencies:
       react:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/react':
-        specifier: ^18.2.64
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.21
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       typescript:
         specifier: 7.0.2
@@ -678,23 +678,23 @@ importers:
   examples/newtab-react-router:
     dependencies:
       react:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.1.0
+        specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react-router-dom:
-        specifier: '5'
+        specifier: 5.3.4
         version: 5.3.4(react@18.3.1)
     devDependencies:
       '@types/react':
-        specifier: ^18.2.64
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.21
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       '@types/react-router-dom':
-        specifier: ^5.3.3
+        specifier: 5.3.3
         version: 5.3.3
       typescript:
         specifier: 7.0.2
@@ -744,8 +744,8 @@ importers:
   examples/newtab-vue:
     dependencies:
       vue:
-        specifier: ^3.4.27
-        version: 3.5.26(typescript@7.0.2)
+        specifier: 3.5.45
+        version: 3.5.45(typescript@7.0.2)
     devDependencies:
       typescript:
         specifier: 7.0.2
@@ -776,11 +776,11 @@ importers:
   examples/preact:
     dependencies:
       preact:
-        specifier: ^10.19.6
+        specifier: 10.27.3
         version: 10.27.3
     devDependencies:
       '@types/react':
-        specifier: ^18.2.64
+        specifier: 18.3.27
         version: 18.3.27
       typescript:
         specifier: 7.0.2
@@ -789,17 +789,17 @@ importers:
   examples/react:
     dependencies:
       react:
-        specifier: ^18.3.1
+        specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.3.1
+        specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/react':
-        specifier: ^18.2.64
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.21
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       typescript:
         specifier: 7.0.2
@@ -810,19 +810,19 @@ importers:
   examples/sidebar-antd:
     dependencies:
       '@ant-design/icons':
-        specifier: ^6.1.1
+        specifier: 6.1.1
         version: 6.1.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@ant-design/x':
-        specifier: ^2.6.0
+        specifier: 2.6.0
         version: 2.6.0(antd@6.3.6(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       antd:
-        specifier: ^6.3.6
+        specifier: 6.3.6
         version: 6.3.6(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react:
-        specifier: ^19.0.0
+        specifier: 19.2.5
         version: 19.2.5
       react-dom:
-        specifier: ^19.0.0
+        specifier: 19.2.5
         version: 19.2.5(react@19.2.5)
 
   examples/sidebar-monorepo-nx:
@@ -865,10 +865,10 @@ importers:
         specifier: ^0.5.15
         version: 0.5.19(tailwindcss@4.1.17)
       '@types/react':
-        specifier: ^18.3.0
+        specifier: 18.3.27
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.27)
       autoprefixer:
         specifier: ^10.4.20
@@ -927,8 +927,8 @@ importers:
   examples/vue:
     dependencies:
       vue:
-        specifier: ^3.4.27
-        version: 3.5.26(typescript@7.0.2)
+        specifier: 3.5.45
+        version: 3.5.45(typescript@7.0.2)
     devDependencies:
       typescript:
         specifier: 7.0.2
@@ -1090,10 +1090,6 @@ packages:
     resolution: {integrity: sha512-brcMGQaVzIeUb+6/bs1Av0f8YuNNjKY2JyvfRCsFuFsdKccEQ5Ges2y74D74NZ1Rz8lKJ9ksJkfqwQFJ/iNEyQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-string-parser@7.27.1':
-    resolution: {integrity: sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helper-string-parser@7.29.14':
     resolution: {integrity: sha512-CXvKMFvM80ihI7Vox9jb+kQjnyjESQNPM+vB7U0Zz6TWuZA+Z/FL0QPMH300h33qJtIx+REeBhXqWOPW48TcAQ==}
     engines: {node: '>=6.9.0'}
@@ -1141,11 +1137,6 @@ packages:
   '@babel/helpers@8.0.5':
     resolution: {integrity: sha512-fQtPOXjYOYv85PIdwotp2TJGVYOycX0PQq+l844fFAxOULtBy8BVF35GyeueX0r4KvDthqPH5xAI1clQPk/2uA==}
     engines: {node: ^22.18.0 || >=24.11.0}
-
-  '@babel/parser@7.28.5':
-    resolution: {integrity: sha512-KKBU1VGYR7ORr3At5HAtUQ+TV3SzRCXmA/8OdDZiLDBIZxVyzXuztPjfLd3BV1PRAQGCMWWSHYhL0F8d5uHBDQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
 
   '@babel/parser@7.29.14':
     resolution: {integrity: sha512-VL220vXuyO2z3rNIQwY7ftj9UwpqOt+33sH+sBWkOekbsSR2g7EEMnOx24ZlCH0xOA3DM/33SifVFGbnJD8r/w==}
@@ -1197,10 +1188,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/runtime@7.27.6':
-    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/runtime@7.29.2':
     resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
@@ -1220,10 +1207,6 @@ packages:
   '@babel/traverse@8.0.5':
     resolution: {integrity: sha512-XFfnuvapSc/vJOcUO7kwORSvpBIvraofKEZ2dhT0PjiF21BRCD7YbAFC8UEeDJNeLoQz82/gVqzgX5hCzkCbdg==}
     engines: {node: ^22.18.0 || >=24.11.0}
-
-  '@babel/types@7.28.5':
-    resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/types@7.29.14':
     resolution: {integrity: sha512-UjI/dKmwJwT9pOszJitq2G6EObZPnsZUfdCr92z2TlF3EZK9J3EdfOKUrCzHl6wFthbzwhzl1Soc/UIwxRiq6w==}
@@ -1838,9 +1821,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@preact/signals-core@1.10.0':
-    resolution: {integrity: sha512-qlKeXlfqtlC+sjxCPHt6Sk0/dXBrKZVcPlianqjNc/vW263YBFiP5mRrgKpHoO0q222Thm1TdYQWfCKpbbgvwA==}
-
   '@preact/signals-core@1.14.5':
     resolution: {integrity: sha512-vcRv7Ityz5JVmeiVqIluLFzT/PDS/AlhHUpw3/aUWqcVUs6bDGIPXE/6RSC4evBNWYvnniozg5Syfj33al3gkg==}
 
@@ -1856,11 +1836,6 @@ packages:
 
   '@prefresh/core@1.5.11':
     resolution: {integrity: sha512-Ml00PP8jeHaADxfQqxUs4+M5JS+T5J26UnvPVfsrmlpGw2I3e9XtM0DMeuzkmvg+Tn7VdHSMpLBrDPG0iHoDqQ==}
-    peerDependencies:
-      preact: ^10.0.0 || ^11.0.0-0
-
-  '@prefresh/core@1.5.9':
-    resolution: {integrity: sha512-IKBKCPaz34OFVC+adiQ2qaTF5qdztO2/4ZPf4KsRTgjKosWqxVXmEbxCiUydYZRY8GVie+DQlKzQr9gt6HQ+EQ==}
     peerDependencies:
       preact: ^10.0.0 || ^11.0.0-0
 
@@ -2989,17 +2964,11 @@ packages:
       vue:
         optional: true
 
-  '@vue/compiler-core@3.5.26':
-    resolution: {integrity: sha512-vXyI5GMfuoBCnv5ucIT7jhHKl55Y477yxP6fc4eUswjP8FG3FFVFd41eNDArR+Uk3QKn2Z85NavjaxLxOC19/w==}
-
   '@vue/compiler-core@3.5.43':
     resolution: {integrity: sha512-zdiLhnbe1QQqgDT8xZMpNmyqZ3qlI+/Q/FHQco57Kwl/b05HhCzN6eVGN9QU9rbga4CrS0H5SYY8VGHZCt/1Hg==}
 
   '@vue/compiler-core@3.5.45':
     resolution: {integrity: sha512-XGHJrM6ufZARAc/w+tyOswStw9tdKiqCKBScI4gGaNxD+aaGu/HQWgKJ+JItjRLPqenQ7iE7G8AJC7T5ew1p+g==}
-
-  '@vue/compiler-dom@3.5.26':
-    resolution: {integrity: sha512-y1Tcd3eXs834QjswshSilCBnKGeQjQXB6PqFn/1nxcQw4pmG42G8lwz+FZPAZAby6gZeHSt/8LMPfZ4Rb+Bd/A==}
 
   '@vue/compiler-dom@3.5.43':
     resolution: {integrity: sha512-PEZoAk3NQmsn/ejMzSOCyTYqwGqczrWm70PuhBKjjv1+TCoQAaO/zOqNwjV+honlNstT5ILxtc+8r8UUfj+iEQ==}
@@ -3007,17 +2976,11 @@ packages:
   '@vue/compiler-dom@3.5.45':
     resolution: {integrity: sha512-LbP2d19GSOYGPmvMBBCVJVlv7TKtjM1Cfeyu3cYia720pknZP+1cLX7H5MVatvruT6MuJhiPuNbQBW/MDn/EwA==}
 
-  '@vue/compiler-sfc@3.5.26':
-    resolution: {integrity: sha512-egp69qDTSEZcf4bGOSsprUr4xI73wfrY5oRs6GSgXFTiHrWj4Y3X5Ydtip9QMqiCMCPVwLglB9GBxXtTadJ3mA==}
-
   '@vue/compiler-sfc@3.5.43':
     resolution: {integrity: sha512-FCbrG3XNCRl+js3huuKx4IVHBLTvMkJhVepjbxSPu1gn4yWLaYtGNQdjJGZaMytXB6qb76qQDDmDSLy/vkmleQ==}
 
   '@vue/compiler-sfc@3.5.45':
     resolution: {integrity: sha512-MKFjb2UX0M/l/jhfzqMLrI8VM4pfvFKG3pqFZkSZFHRLtNld/O4RtUPZFWSwhro/14qP88UQEkWzHxAZAQ0tsw==}
-
-  '@vue/compiler-ssr@3.5.26':
-    resolution: {integrity: sha512-lZT9/Y0nSIRUPVvapFJEVDbEXruZh2IYHMk2zTtEgJSlP5gVOqeWXH54xDKAaFS4rTnDeDBQUYDtxKyoW9FwDw==}
 
   '@vue/compiler-ssr@3.5.43':
     resolution: {integrity: sha512-GF62orf7KiJX9RqrHNGrYBudsQGD0OhJ5nDs90O8UiDuS40+YMYomiXu6w6EuvtXuRDc3MSNis3EaaSKAVSWpg==}
@@ -3034,17 +2997,11 @@ packages:
   '@vue/devtools-shared@8.2.1':
     resolution: {integrity: sha512-Fkac7lUdGReh6pVOi3AYPRGe82LQqRmAfThW7RRligOAP0ZA/Z1z9XLHDM9dv34pV2HRc79DK8uKPeG2fLnA/g==}
 
-  '@vue/reactivity@3.5.26':
-    resolution: {integrity: sha512-9EnYB1/DIiUYYnzlnUBgwU32NNvLp/nhxLXeWRhHUEeWNTn1ECxX8aGO7RTXeX6PPcxe3LLuNBFoJbV4QZ+CFQ==}
-
   '@vue/reactivity@3.5.43':
     resolution: {integrity: sha512-G/c9GyOZNI2jVaaS6OX1EF1SSFSv7H0ERqNTl4+DTFMlZmB5eVAB53aLQNam/7NL2NPtaDD7RdVrzf8uJzMuOA==}
 
   '@vue/reactivity@3.5.45':
     resolution: {integrity: sha512-WqkyubNWpI4OYBOipSrjIssMdJO8K1i9Zts/Wm8Er10/0msOEwCyWWWvZnAI7WW3kQsTong6DJp8Cbb+vd4cPA==}
-
-  '@vue/runtime-core@3.5.26':
-    resolution: {integrity: sha512-xJWM9KH1kd201w5DvMDOwDHYhrdPTrAatn56oB/LRG4plEQeZRQLw0Bpwih9KYoqmzaxF0OKSn6swzYi84e1/Q==}
 
   '@vue/runtime-core@3.5.43':
     resolution: {integrity: sha512-hU6U6VnVhBGQDpvlnnDlIB8ZGJBiOcgk2lh/0InltHiz3D8oSkluvuvY+do1G2H3+udeKFsmaBlgVYP7gXQzEw==}
@@ -3052,28 +3009,17 @@ packages:
   '@vue/runtime-core@3.5.45':
     resolution: {integrity: sha512-bzIO3+FABjpj85uIKSc+Qnj36/sxDNI3tcH9i6w6xKA1k6e0ejv0G0jMCfeJBvK3yGL5XbJ3DMZj+ClqyCHFYw==}
 
-  '@vue/runtime-dom@3.5.26':
-    resolution: {integrity: sha512-XLLd/+4sPC2ZkN/6+V4O4gjJu6kSDbHAChvsyWgm1oGbdSO3efvGYnm25yCjtFm/K7rrSDvSfPDgN1pHgS4VNQ==}
-
   '@vue/runtime-dom@3.5.43':
     resolution: {integrity: sha512-Bb2Jc0YjjJdMt1SJmb9b2L/IWd3I8lIT9x9eS/xvvP9CiVgna0ffua74xKRmt4/uSJ+0r4iN8ex1jrqkhQGWQw==}
 
   '@vue/runtime-dom@3.5.45':
     resolution: {integrity: sha512-ZvRTFMDgfqTDYWvJfoVpQTJx1RN5M6l7Pyd6wfdY2NaXzbPQVh9ezeQYFbNPP6bIcRVn2SqSSR25N/jSW69BFw==}
 
-  '@vue/server-renderer@3.5.26':
-    resolution: {integrity: sha512-TYKLXmrwWKSodyVuO1WAubucd+1XlLg4set0YoV+Hu8Lo79mp/YMwWV5mC5FgtsDxX3qo1ONrxFaTP1OQgy1uA==}
-    peerDependencies:
-      vue: 3.5.26
-
   '@vue/server-renderer@3.5.43':
     resolution: {integrity: sha512-l2Ygjv9NehV94PSBxNWsAHC0j/eIIKbn92mBuWXAPGLnn6HfJ6MH5ubsd+Nk0YoZ5FRuxWI1P2VSoh+dbPQhCQ==}
 
   '@vue/server-renderer@3.5.45':
     resolution: {integrity: sha512-1fNXUHhhsWf4EVL4XixbGBU5mKdiIXJAB82feHRTyPPo6ZUEYWIJuEeUl3mVV6QDBp50HJOX4obLhxYXlrjrzA==}
-
-  '@vue/shared@3.5.26':
-    resolution: {integrity: sha512-7Z6/y3uFI5PRoKeorTOSXKcDj0MSasfNNltcslbFrPpcw6aXRUALq4IfJlaTRspiWIUOEZbrpM+iQGmCOiWe4A==}
 
   '@vue/shared@3.5.43':
     resolution: {integrity: sha512-uksS7YGMR5NZyr4JNq0Rp+QyLns0ueaz20KwzIPW9R0LH1Vnt4E+XUM29PNseEbf1www2gOuhuDi5AKOIXag9Q==}
@@ -6168,14 +6114,6 @@ packages:
       vite:
         optional: true
 
-  vue@3.5.26:
-    resolution: {integrity: sha512-SJ/NTccVyAoNUJmkM9KUqPcYlY+u8OVL1X5EW9RIs3ch5H2uERxyyIUI4MRxVCSOiEcupX9xNGde1tL9ZKpimA==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   vue@3.5.43:
     resolution: {integrity: sha512-o5qZoksdnjIKvW1srZ3ab7pcDNYAerBjRe54D0LBLfRdCYFrSgBHVXokMas35czQc0//lmx4/tuY4ZNQ+Rf2Ng==}
     peerDependencies:
@@ -6409,7 +6347,7 @@ snapshots:
       '@ant-design/cssinjs-utils': 2.1.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@ant-design/fast-color': 3.0.1
       '@ant-design/icons': 6.1.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.29.2
       '@rc-component/motion': 1.3.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@rc-component/resize-observer': 1.1.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@rc-component/util': 1.10.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -6597,8 +6535,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-string-parser@7.27.1': {}
-
   '@babel/helper-string-parser@7.29.14': {}
 
   '@babel/helper-string-parser@7.29.7': {}
@@ -6628,10 +6564,6 @@ snapshots:
     dependencies:
       '@babel/template': 8.0.0
       '@babel/types': 8.0.5
-
-  '@babel/parser@7.28.5':
-    dependencies:
-      '@babel/types': 7.28.5
 
   '@babel/parser@7.29.14':
     dependencies:
@@ -6689,8 +6621,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/runtime@7.27.6': {}
-
   '@babel/runtime@7.29.2': {}
 
   '@babel/template@7.29.7':
@@ -6726,11 +6656,6 @@ snapshots:
       '@babel/template': 8.0.0
       '@babel/types': 8.0.5
       obug: 2.2.1
-
-  '@babel/types@7.28.5':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.28.5
 
   '@babel/types@7.29.14':
     dependencies:
@@ -7251,13 +7176,11 @@ snapshots:
     dependencies:
       playwright: 1.56.1
 
-  '@preact/signals-core@1.10.0': {}
-
   '@preact/signals-core@1.14.5': {}
 
   '@preact/signals@1.3.2(preact@10.27.3)':
     dependencies:
-      '@preact/signals-core': 1.10.0
+      '@preact/signals-core': 1.14.5
       preact: 10.27.3
 
   '@preact/signals@2.11.4(preact@11.2.0)':
@@ -7265,13 +7188,13 @@ snapshots:
       '@preact/signals-core': 1.14.5
       preact: 11.2.0
 
+  '@prefresh/core@1.5.11(preact@10.27.3)':
+    dependencies:
+      preact: 10.27.3
+
   '@prefresh/core@1.5.11(preact@11.2.0)':
     dependencies:
       preact: 11.2.0
-
-  '@prefresh/core@1.5.9(preact@10.27.3)':
-    dependencies:
-      preact: 10.27.3
 
   '@protobufjs/aspromise@1.1.2': {}
 
@@ -8361,7 +8284,7 @@ snapshots:
 
   '@vue-macros/common@3.1.4(vue@3.5.45(typescript@7.0.2))':
     dependencies:
-      '@vue/compiler-sfc': 3.5.43
+      '@vue/compiler-sfc': 3.5.45
       ast-kit: 2.2.0
       local-pkg: 1.2.1
       magic-string-ast: 1.0.3
@@ -8369,17 +8292,9 @@ snapshots:
     optionalDependencies:
       vue: 3.5.45(typescript@7.0.2)
 
-  '@vue/compiler-core@3.5.26':
-    dependencies:
-      '@babel/parser': 7.28.5
-      '@vue/shared': 3.5.26
-      entities: 7.0.1
-      estree-walker: 2.0.2
-      source-map-js: 1.2.1
-
   '@vue/compiler-core@3.5.43':
     dependencies:
-      '@babel/parser': 7.29.9
+      '@babel/parser': 7.29.14
       '@vue/shared': 3.5.43
       entities: 7.0.1
       estree-walker: 2.0.2
@@ -8393,11 +8308,6 @@ snapshots:
       estree-walker: 2.0.2
       source-map-js: 1.2.2
 
-  '@vue/compiler-dom@3.5.26':
-    dependencies:
-      '@vue/compiler-core': 3.5.26
-      '@vue/shared': 3.5.26
-
   '@vue/compiler-dom@3.5.43':
     dependencies:
       '@vue/compiler-core': 3.5.43
@@ -8407,18 +8317,6 @@ snapshots:
     dependencies:
       '@vue/compiler-core': 3.5.45
       '@vue/shared': 3.5.45
-
-  '@vue/compiler-sfc@3.5.26':
-    dependencies:
-      '@babel/parser': 7.28.5
-      '@vue/compiler-core': 3.5.26
-      '@vue/compiler-dom': 3.5.26
-      '@vue/compiler-ssr': 3.5.26
-      '@vue/shared': 3.5.26
-      estree-walker: 2.0.2
-      magic-string: 0.30.21
-      postcss: 8.5.10
-      source-map-js: 1.2.1
 
   '@vue/compiler-sfc@3.5.43':
     dependencies:
@@ -8444,11 +8342,6 @@ snapshots:
       postcss: 8.5.33
       source-map-js: 1.2.2
 
-  '@vue/compiler-ssr@3.5.26':
-    dependencies:
-      '@vue/compiler-dom': 3.5.26
-      '@vue/shared': 3.5.26
-
   '@vue/compiler-ssr@3.5.43':
     dependencies:
       '@vue/compiler-dom': 3.5.43
@@ -8472,10 +8365,6 @@ snapshots:
 
   '@vue/devtools-shared@8.2.1': {}
 
-  '@vue/reactivity@3.5.26':
-    dependencies:
-      '@vue/shared': 3.5.26
-
   '@vue/reactivity@3.5.43':
     dependencies:
       '@vue/shared': 3.5.43
@@ -8483,11 +8372,6 @@ snapshots:
   '@vue/reactivity@3.5.45':
     dependencies:
       '@vue/shared': 3.5.45
-
-  '@vue/runtime-core@3.5.26':
-    dependencies:
-      '@vue/reactivity': 3.5.26
-      '@vue/shared': 3.5.26
 
   '@vue/runtime-core@3.5.43':
     dependencies:
@@ -8498,13 +8382,6 @@ snapshots:
     dependencies:
       '@vue/reactivity': 3.5.45
       '@vue/shared': 3.5.45
-
-  '@vue/runtime-dom@3.5.26':
-    dependencies:
-      '@vue/reactivity': 3.5.26
-      '@vue/runtime-core': 3.5.26
-      '@vue/shared': 3.5.26
-      csstype: 3.2.3
 
   '@vue/runtime-dom@3.5.43':
     dependencies:
@@ -8520,12 +8397,6 @@ snapshots:
       '@vue/shared': 3.5.45
       csstype: 3.2.3
 
-  '@vue/server-renderer@3.5.26(vue@3.5.26(typescript@7.0.2))':
-    dependencies:
-      '@vue/compiler-ssr': 3.5.26
-      '@vue/shared': 3.5.26
-      vue: 3.5.26(typescript@7.0.2)
-
   '@vue/server-renderer@3.5.43':
     dependencies:
       '@vue/compiler-ssr': 3.5.43
@@ -8537,8 +8408,6 @@ snapshots:
       '@vue/compiler-ssr': 3.5.45
       '@vue/runtime-dom': 3.5.45
       '@vue/shared': 3.5.45
-
-  '@vue/shared@3.5.26': {}
 
   '@vue/shared@3.5.43': {}
 
@@ -8773,7 +8642,7 @@ snapshots:
 
   ast-kit@2.2.0:
     dependencies:
-      '@babel/parser': 7.29.9
+      '@babel/parser': 7.29.14
       pathe: 2.0.3
 
   ast-kit@3.0.1:
@@ -12018,16 +11887,6 @@ snapshots:
       - rollup
       - unloader
       - webpack
-
-  vue@3.5.26(typescript@7.0.2):
-    dependencies:
-      '@vue/compiler-dom': 3.5.26
-      '@vue/compiler-sfc': 3.5.26
-      '@vue/runtime-dom': 3.5.26
-      '@vue/server-renderer': 3.5.26(vue@3.5.26(typescript@7.0.2))
-      '@vue/shared': 3.5.26
-    optionalDependencies:
-      typescript: 7.0.2
 
   vue@3.5.43(typescript@7.0.2):
     dependencies:

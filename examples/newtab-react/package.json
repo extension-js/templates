@@ -6,12 +6,12 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
     "typescript": "7.0.2"
   }
 }
