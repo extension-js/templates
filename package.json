@@ -91,7 +91,7 @@
     "test:catalog-readme": "node scripts/checks/assert-catalog-readme.mjs",
     "test:spec-coverage": "node scripts/checks/assert-spec-coverage.mjs",
     "test:public-folder": "node scripts/checks/assert-public-folder-location.mjs",
-    "test:framework-pins": "node scripts/checks/assert-exact-framework-pins.mjs",
+    "test:example-pins": "node scripts/checks/assert-exact-example-pins.mjs",
     "test:markup-punctuation": "node scripts/checks/assert-no-space-before-punctuation.mjs",
     "test:template-videos": "node scripts/checks/assert-template-videos.mjs",
     "test:template-screenshots": "node scripts/checks/assert-template-screenshots.mjs",

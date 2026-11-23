@@ -14,39 +14,12 @@ const FIELDS = [
   'optionalDependencies'
 ]
 
-// Template tests install each example fresh, so a range lets a framework
-// release reach CI the day it ships. Frameworks move only through a pull request.
-const FRAMEWORKS = new Set([
-  'react',
-  'react-dom',
-  'react-router-dom',
-  '@types/react',
-  '@types/react-dom',
-  '@types/react-router-dom',
-  'preact',
-  'wouter-preact',
-  'vue',
-  'vue-router',
-  'svelte',
-  'svelte-spa-router',
-  'antd'
-])
-const FRAMEWORK_SCOPES = [
-  '@preact/',
-  '@prefresh/',
-  '@vue/',
-  '@sveltejs/',
-  '@ant-design/'
-]
-
+// Template tests install each example fresh, so a range lets any release reach
+// CI the day it ships. Every dependency moves only through a pull request.
 const EXACT = /^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/
 
-function isFramework(name) {
-  return (
-    FRAMEWORKS.has(name) ||
-    FRAMEWORK_SCOPES.some((scope) => name.startsWith(scope))
-  )
-}
+// Local protocols point at sibling packages, not at a registry release.
+const LOCAL = /^(workspace|file|link):/
 
 // Monorepo templates keep more package.json files under packages/<name>.
 function findManifests(dir, found = []) {
@@ -68,7 +41,7 @@ const ranged = []
 // A walk that matches nothing would report every template as clean.
 if (manifests.length < 40) {
   console.error(
-    `assert-exact-framework-pins: found only ${manifests.length} package.json files, ` +
+    `assert-exact-example-pins: found only ${manifests.length} package.json files, ` +
       'expected at least 40. The scan stopped matching.'
   )
 
@@ -80,7 +53,7 @@ for (const file of manifests) {
 
   for (const field of FIELDS) {
     for (const [name, spec] of Object.entries(pkg[field] || {})) {
-      if (!isFramework(name) || EXACT.test(spec)) continue
+      if (EXACT.test(spec) || LOCAL.test(spec)) continue
 
       ranged.push(`  ${path.relative(ROOT, file)} ${field}.${name}: ${spec}`)
     }
@@ -89,14 +62,14 @@ for (const file of manifests) {
 
 if (ranged.length) {
   console.error(
-    `assert-exact-framework-pins: ${ranged.length} framework dependencies use a range:\n` +
+    `assert-exact-example-pins: ${ranged.length} example dependencies are not pinned exactly:\n` +
       ranged.join('\n') +
-      '\nPin each one to the exact version the lockfile resolves, so a framework release reaches the templates only through a pull request.'
+      '\nPin each one to the exact version the lockfile resolves, so a release reaches the templates only through a pull request.'
   )
 
   process.exit(1)
 }
 
 console.log(
-  `assert-exact-framework-pins: ${manifests.length} package.json files pin every framework exactly`
+  `assert-exact-example-pins: ${manifests.length} package.json files pin every dependency exactly`
 )
