@@ -3651,6 +3651,8 @@
       "video": "VcAPgX8KHgI",
       "files": [
         "examples/preact/extension.config.js",
+        "examples/preact/public/extension.svg",
+        "examples/preact/public/logo.svg",
         "examples/preact/src/background.ts",
         "examples/preact/src/content/ContentApp.tsx",
         "examples/preact/src/content/scripts.tsx",
@@ -3670,7 +3672,7 @@
       ],
       "browsers": ["chrome", "edge", "firefox"],
       "screenshot": "examples/preact/screenshot.png",
-      "icon": "examples/preact/src/images/icon.png",
+      "icon": "examples/preact/public/logo.svg",
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/preact"
     },
     {
@@ -4275,6 +4277,7 @@
       "video": "RgMo9t-oLL4",
       "files": [
         "examples/svelte/extension.config.js",
+        "examples/svelte/public/extension.svg",
         "examples/svelte/src/background.ts",
         "examples/svelte/src/content/ContentApp.svelte",
         "examples/svelte/src/content/scripts.ts",
