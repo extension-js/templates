@@ -2,22 +2,32 @@ version: 2
 updates:
   # The whole repository runs on one pinned Extension.js version. After each
   # stable release this opens the repin pull request, and CI is its check.
-  # Nothing else is updated here: the examples keep the versions they teach.
+  # The two monorepo examples ride here too: their one dependency each (nx,
+  # turbo) is locked in the root pnpm-lock.yaml, which only this entry reads.
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
     allow:
       - dependency-name: "extension"
-    open-pull-requests-limit: 1
+      - dependency-name: "nx"
+      - dependency-name: "turbo"
+    # A release waits three days, except ours, which is repinned at once.
+    cooldown:
+      default-days: 3
+      exclude:
+        - "extension"
+    # One for the repin, one each for nx and turbo, so neither blocks it.
+    open-pull-requests-limit: 3
     rebase-strategy: "auto"
 
   # The examples pin every dependency exactly (test:example-pins), so this is
   # how their versions move. Each folder is a pnpm workspace member and
   # Dependabot reads pnpm-lock.yaml and pnpm-workspace.yaml from the root, so
   # one pull request updates the package.json and the shared lockfile.
-  # The two monorepo examples are left out: each carries its own nested
+  # The two monorepo examples are left out here: each carries its own nested
   # pnpm-workspace.yaml, which Dependabot would read instead of the root one.
+  # The entry above updates them.
   - package-ecosystem: "npm"
     directories:
       - "/examples/action*"
