@@ -951,7 +951,7 @@ function renderReadme(detected) {
     : ''
 
   return (
-    `[powered-image]: https://img.shields.io/badge/Powered%20by-Extension.js-0971fe\n` +
+    `[powered-image]: https://img.shields.io/badge/Powered%20by-Extension.js-0065e6\n` +
     `[powered-url]: https://extension.js.org\n` +
     `\n` +
     `![Powered by Extension.js][powered-image]\n` +
