@@ -38,10 +38,13 @@ on:
         default: main
 
 # A gate run is called from another workflow, where github.workflow and
-# github.ref are the caller's, so it gets a group of its own and cancels nothing.
+# github.event_name are the caller's, so it gets a group of its own and cancels
+# nothing. A pull request cancels its own older runs. Any other run, such as a
+# push to main, groups by run id: a run of main is never cancelled, and never
+# replaced while pending by a later run in the same group.
 concurrency:
-  group: ${{ inputs.cli-version && format('cli-gate-{0}-{1}', inputs.cli-version, github.run_id) || format('{0}-{1}', github.workflow, github.ref) }}
-  cancel-in-progress: true
+  group: ${{ inputs.cli-version && format('cli-gate-{0}-{1}', inputs.cli-version, github.run_id) || format('{0}-{1}', github.workflow, github.event.pull_request.number || github.run_id) }}
+  cancel-in-progress: ${{ !inputs.cli-version && github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
