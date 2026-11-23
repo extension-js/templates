@@ -40,9 +40,11 @@ env:
 permissions:
   contents: read
 
+# A pull request cancels its own older runs. A push to main, the nightly and a
+# dispatch each get a group of their own, so none of them cancels another.
 concurrency:
-  group: optional-deps-ecosystem-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: optional-deps-ecosystem-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   versioned-ecosystem:
