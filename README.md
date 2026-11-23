@@ -1,4 +1,4 @@
-[powered-image]: https://img.shields.io/badge/Powered%20by-Extension.js-0971fe?logo=extension.js&logoColor=white&style=flat
+[powered-image]: https://img.shields.io/badge/Powered%20by-Extension.js-0065e6?logo=extension.js&logoColor=white&style=flat
 [powered-url]: https://extension.js.org
 [action-image]: https://img.shields.io/github/actions/workflow/status/extension-js/templates/ci.yml?branch=main&label=CI&logo=github&color=2ecc40&style=flat
 [action-url]: https://github.com/extension-js/templates/actions

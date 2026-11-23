@@ -43,7 +43,7 @@ img {
 
 .banner {
   padding: 1rem 1.5rem;
-  border-left: 4px solid #0971fe;
+  border-left: 4px solid #0065e6;
   background-color: #11151c;
   color: #e5e7eb;
 }
@@ -59,7 +59,7 @@ img {
 .setting input {
   width: 1.8rem;
   height: 1.8rem;
-  accent-color: #0971fe;
+  accent-color: #0065e6;
 }
 
 .status {
