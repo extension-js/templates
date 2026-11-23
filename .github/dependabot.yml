@@ -11,3 +11,108 @@ updates:
       - dependency-name: "extension"
     open-pull-requests-limit: 1
     rebase-strategy: "auto"
+
+  # The examples pin every dependency exactly (test:example-pins), so this is
+  # how their versions move. Each folder is a pnpm workspace member and
+  # Dependabot reads pnpm-lock.yaml and pnpm-workspace.yaml from the root, so
+  # one pull request updates the package.json and the shared lockfile.
+  # The two monorepo examples are left out: each carries its own nested
+  # pnpm-workspace.yaml, which Dependabot would read instead of the root one.
+  - package-ecosystem: "npm"
+    directories:
+      - "/examples/action*"
+      - "/examples/ai-*"
+      - "/examples/content*"
+      - "/examples/devtools*"
+      - "/examples/init"
+      - "/examples/javascript"
+      - "/examples/newtab*"
+      - "/examples/playwright"
+      - "/examples/preact"
+      - "/examples/react"
+      - "/examples/sidebar"
+      - "/examples/sidebar-antd"
+      - "/examples/sidebar-shadcn"
+      - "/examples/special-folders-*"
+      - "/examples/svelte"
+      - "/examples/transformers-js"
+      - "/examples/typescript"
+      - "/examples/vue"
+    schedule:
+      interval: "weekly"
+    # A release waits three days before it is proposed.
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
+    # One pull request per family for minor and patch releases. A major
+    # matches no group, so it arrives in its own pull request.
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-*"
+          - "@types/react"
+          - "@types/react-*"
+          - "@radix-ui/*"
+          - "lucide-react"
+        update-types: ["minor", "patch"]
+      preact:
+        patterns:
+          - "preact"
+          - "preact-*"
+          - "@preact/*"
+          - "@prefresh/*"
+          - "wouter-preact"
+        update-types: ["minor", "patch"]
+      vue:
+        patterns:
+          - "vue"
+          - "vue-*"
+          - "@vue/*"
+        update-types: ["minor", "patch"]
+      svelte:
+        patterns:
+          - "svelte"
+          - "svelte-*"
+          - "@sveltejs/*"
+          - "@tsconfig/svelte"
+        update-types: ["minor", "patch"]
+      antd:
+        patterns:
+          - "antd"
+          - "@ant-design/*"
+        update-types: ["minor", "patch"]
+      tailwind-postcss:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "tailwind-merge"
+          - "tw-animate-css"
+          - "postcss"
+          - "postcss-*"
+          - "autoprefixer"
+        update-types: ["minor", "patch"]
+      linters-formatters:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "@eslint/*"
+          - "typescript-eslint"
+          - "@typescript-eslint/*"
+          - "globals"
+          - "prettier"
+          - "prettier-*"
+          - "stylelint"
+          - "stylelint-*"
+        update-types: ["minor", "patch"]
+      build-tooling:
+        patterns:
+          - "typescript"
+          - "sass"
+          - "less"
+          - "@playwright/test"
+        update-types: ["minor", "patch"]
+      everything-else:
+        patterns:
+          - "*"
+        update-types: ["minor", "patch"]
