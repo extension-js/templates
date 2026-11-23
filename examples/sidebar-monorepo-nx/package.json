@@ -19,7 +19,7 @@
     "build:firefox": "nx build sidebar-monorepo-nx-packages-extension -- --browser=firefox"
   },
   "devDependencies": {
-    "nx": "^21.0.0"
+    "nx": "21.6.11"
   },
   "packageManager": "pnpm@8.15.0"
 }

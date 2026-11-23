@@ -6,6 +6,6 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "less": "^4.4.0"
+    "less": "4.6.7"
   }
 }

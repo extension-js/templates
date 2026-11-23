@@ -19,7 +19,7 @@
     "build:firefox": "extension build packages/extension --browser=firefox"
   },
   "devDependencies": {
-    "turbo": "^2.1.3"
+    "turbo": "2.6.1"
   },
   "packageManager": "pnpm@8.15.0"
 }
