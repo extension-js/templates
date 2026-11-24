@@ -8,3 +8,12 @@
 packages:
   - './examples/*'
   - './templates/*'
+
+# Our own packages ship together and are repinned the day they ship, so a
+# release-age window never holds them back. Dependabot passes its cooldown
+# to pnpm as one window for the whole lockfile.
+minimumReleaseAgeExclude:
+  - extension
+  - extension-create
+  - extension-develop
+  - extension-install
