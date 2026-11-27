@@ -86,7 +86,9 @@ const FALLBACK_ICON_CANDIDATES = [
   ['src', 'images', 'icon.png'],
   ['src', 'images', 'icon.svg'],
   ['src', 'images', 'extension.png'],
-  ['src', 'images', 'extension.svg']
+  ['src', 'images', 'extension.svg'],
+  ['packages', 'extension', 'src', 'images', 'icon.png'],
+  ['packages', 'extension', 'src', 'images', 'icon.svg']
 ]
 
 function readJsonSafe(filePath) {

@@ -3652,7 +3652,6 @@
       "files": [
         "examples/preact/extension.config.js",
         "examples/preact/public/extension.svg",
-        "examples/preact/public/logo.svg",
         "examples/preact/src/background.ts",
         "examples/preact/src/content/ContentApp.tsx",
         "examples/preact/src/content/scripts.tsx",
@@ -3672,7 +3671,7 @@
       ],
       "browsers": ["chrome", "edge", "firefox"],
       "screenshot": "examples/preact/screenshot.png",
-      "icon": "examples/preact/public/logo.svg",
+      "icon": "examples/preact/src/images/icon.png",
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/preact"
     },
     {
@@ -3948,7 +3947,7 @@
       ],
       "browsers": ["chrome", "edge", "firefox"],
       "screenshot": "examples/sidebar-monorepo-nx/screenshot.png",
-      "icon": null,
+      "icon": "examples/sidebar-monorepo-nx/packages/extension/src/images/icon.png",
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/sidebar-monorepo-nx"
     },
     {
@@ -4018,7 +4017,7 @@
       ],
       "browsers": ["chrome", "edge", "firefox"],
       "screenshot": "examples/sidebar-monorepo-turborepo/screenshot.png",
-      "icon": null,
+      "icon": "examples/sidebar-monorepo-turborepo/packages/extension/src/images/icon.png",
       "repositoryUrl": "https://github.com/extension-js/templates/tree/main/examples/sidebar-monorepo-turborepo"
     },
     {
