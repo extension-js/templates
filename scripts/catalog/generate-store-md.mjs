@@ -14,7 +14,7 @@ const WIDTH = 76
 
 // The date the template text last changed. `extension create` rewrites this
 // line to the scaffold date, so the catalog copy only has to stay honest.
-const TEMPLATE_UPDATED = '2026-10-24'
+const TEMPLATE_UPDATED = '2026-11-28'
 
 // Mozilla wants a reproducible build for a bundled package, so the reviewer
 // notes name a toolchain. CI builds the catalog on Node 22 (ci.yml).
@@ -333,6 +333,10 @@ export function renderStoreMd({manifest, packageJson, seed, slug}) {
     `Last updated: ${TEMPLATE_UPDATED}`,
     '',
     '## Listing',
+    '',
+    ...note(
+      'An extension that ships more than one _locales folder adds one section per extra language, headed "## Listing (pt-BR)" with that folder\'s language code and holding the same Name, Summary and Description lines.'
+    ).map((l) => l.replace(/^ {2}/, '')),
     '',
     ...bullet('Name', name),
     ...note('The store title, 100 characters at most on every store.'),
